@@ -1,0 +1,59 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+#Restaurants that will be displayed to the users
+GET      /list_of_all_restaurants                                                   controllers.RestaurantController.getRestaurantsList()
+GET      /restaurants_by_id/:id                                                     controllers.RestaurantController.getRestaurantByID(id: Integer)
+
+
+#Restaurants in each collection
+GET     /collections/:collection                                                    controllers.RestaurantController.getCollectionType(collection: String)
+
+#CRUD operations that will be performed by the administrator
+POST     /rest                                                                      controllers.RestaurantController.createRestAdmin()
+PUT      /update_a_restaurant/:id                                                   controllers.RestaurantController.updateRestAdmin(id:Integer)
+DELETE   /rest/:id                                                                  controllers.RestaurantController.deleteRestAdmin(id:Integer)
+
+
+#Get all Restaurants based on a filter that searches by Restaurant Name or Restaurant Area
+GET     /search_restaurants_by_name_area                                            controllers.RestaurantController.getRestaurantsFromSearchFilter(area: java.lang.String ?=null , restaurantname: java.lang.String ?=null)
+GET     /search_nearby_restaurants/:latitude                                        controllers.RestaurantController.getNearbyRestaurants(latitude: java.lang.Double,longitude: java.lang.Double)
+GET     /search_restaurants/:keyword                                                controllers.RestaurantController.getNearbyRestaurantsBySearch(keyword: java.lang.String)
+GET     /restaurants_on_filter                                                     controllers.RestaurantController.getNearbyRestaurantsByFilterSearch(keyword: java.lang.String , cuisine: java.lang.String?=  null, collection: java.lang.String?=  null)
+
+#The members can be retrieved, created, updated and deleted
+GET      /members_list                                                             controllers.MemberController.getMembersList()
+#GET      /members/:id                                                              controllers.MemberController.getMemberByID(id: Integer)
+#GET      /authenticate_member_by_username_password/:username                        controllers.MemberController.getMemberByUsernamePassword(username: java.lang.String , password: java.lang.String ?=null)
+POST     /create_member                                                             controllers.MemberController.createMember()
+#PUT      /update_members/:id                                                       controllers.MemberController.updateMember(id:Integer)
+#DELETE   /delete_member/:id                                                        controllers.MemberController.deleteMember(id:Integer)
+
+# Image controller
+POST /images                                                                        controllers.ImageController.uploadImage()
+GET /images/:id                                                                     controllers.ImageController.downloadImage(id: String)
+DELETE /images/:id                                                                  controllers.ImageController.deleteImage(id: String)
+
+
+#Collection Class
+GET     /get_all_collections                                                        controllers.CollectionController.getCollectionsList()
+GET     /collections_by_id/:ctype                                                   controllers.CollectionController.getCollectionByID(ctype: String)
+POST    /collection                                                                 controllers.CollectionController.createCollection()
+PUT     /update_a_collection/:ctype                                                 controllers.CollectionController.updateCollection(ctype: String)
+DELETE  /delete_collection/:ctype                                                   controllers.CollectionController.deleteCollection(ctype: String)
+
+
+#Other Images
+GET     /get_all_images                                                             controllers.ImagesController.getImagesList()
+
+
+#User Controller
+#POST /users/signup                                                                  controllers.UserController.createUser()
+GET /users/signin                                                                   controllers.UserController.signIn()
+GET /users/signout                                                                  controllers.UserController.signOut()
+GET /users/current                                                                  controllers.UserController.getCurrentUser()

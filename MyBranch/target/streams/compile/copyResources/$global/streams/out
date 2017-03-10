@@ -1,0 +1,7 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/sakondi/Desktop/Backend-Java/MyBranch/conf/application.conf,/Users/sakondi/Desktop/Backend-Java/MyBranch/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/sakondi/Desktop/Backend-Java/MyBranch/conf/conf.iml,/Users/sakondi/Desktop/Backend-Java/MyBranch/target/scala-2.11/classes/conf.iml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/sakondi/Desktop/Backend-Java/MyBranch/conf/logback.xml,/Users/sakondi/Desktop/Backend-Java/MyBranch/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/sakondi/Desktop/Backend-Java/MyBranch/conf/META-INF,/Users/sakondi/Desktop/Backend-Java/MyBranch/target/scala-2.11/classes/META-INF)[0m
+[0m[[0mdebug[0m] [0m	(/Users/sakondi/Desktop/Backend-Java/MyBranch/conf/routes,/Users/sakondi/Desktop/Backend-Java/MyBranch/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/sakondi/Desktop/Backend-Java/MyBranch/conf/META-INF/persistence.xml,/Users/sakondi/Desktop/Backend-Java/MyBranch/target/scala-2.11/classes/META-INF/persistence.xml)[0m
