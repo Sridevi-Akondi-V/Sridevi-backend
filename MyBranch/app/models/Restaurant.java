@@ -63,12 +63,24 @@ public class Restaurant {
     @Column(name="Description")
     private String description;
 
+    @Column(name= "Opening_Time")
+    private Time opening_time;
+
+    @Column(name= "Closing_Time")
+    private Time closing_time;
+
+    @Column(name= "Free_Delivery")
+    private Integer free_delivery;
+
+    @Column(name= "Cost")
+    private Integer cost;
+
     public Restaurant() {
 
     }
 
 
-    public Restaurant (int id, String name, String cuisine, String number, String address, String homepage, String fburl, String workhours, String area, BigDecimal latitude, BigDecimal longitude , String imageurl, String description) {
+    public Restaurant (int id, String name, String cuisine, String number, String address, String homepage, String fburl, String workhours, String area, BigDecimal latitude, BigDecimal longitude , String imageurl, String description, Time opening_time, Time closing_time, Integer free_delivery, Integer cost) {
         this.id = id;
         this.name = name;
         this.cuisine = cuisine;
@@ -82,6 +94,10 @@ public class Restaurant {
         this.longitude = longitude;
         this.imageurl=imageurl;
         this.description=description;
+        this.opening_time=opening_time;
+        this.closing_time=closing_time;
+        this.free_delivery=free_delivery;
+        this.cost=cost;
     }
 
 
@@ -151,6 +167,38 @@ public class Restaurant {
     public String getDescription() { return description; }
     public void setDescription(String description) {
         this.description=description;
+    }
+
+    public Time getOpening_time() {
+        return opening_time;
+    }
+
+    public void setOpening_time(Time opening_time) {
+        this.opening_time = opening_time;
+    }
+
+    public Time getClosing_time() {
+        return closing_time;
+    }
+
+    public void setClosing_time(Time closing_time) {
+        this.closing_time = closing_time;
+    }
+
+    public Integer getFree_delivery() {
+        return free_delivery;
+    }
+
+    public void setFree_delivery(Integer free_delivery) {
+        this.free_delivery = free_delivery;
+    }
+
+    public Integer getCost() {
+        return cost;
+    }
+
+    public void setCost(Integer cost) {
+        this.cost = cost;
     }
 }
 

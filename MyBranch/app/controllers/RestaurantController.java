@@ -16,6 +16,8 @@ import play.mvc.Result;
 
 import javax.persistence.Column;
 import javax.persistence.TypedQuery;
+import java.time.LocalTime;
+import java.util.Date;
 import java.util.List;
 import exceptions.NotFoundException;
 import static play.mvc.Controller.request;
@@ -23,8 +25,10 @@ import static play.mvc.Results.badRequest;
 import static play.mvc.Results.notFound;
 import static play.mvc.Results.ok;
 import javax.persistence.Query;
-/* Edited by Sridevi Akondi */
+
 /* Import Restaurant model */
+
+/* Edited by Sridevi Akondi */
 
 
         public class RestaurantController {
@@ -120,8 +124,12 @@ import javax.persistence.Query;
                 existingRes.setLongitude(r.getLongitude());
                 existingRes.setImage(r.getImage());
                 existingRes.setDescription(r.getDescription());
+                existingRes.setOpening_time(r.getOpening_time());
+                existingRes.setClosing_time(r.getClosing_time());
+                existingRes.setFree_delivery(r.getFree_delivery());
+                existingRes.setCost(r.getCost());
                 jpaApi.em().merge(existingRes);
-                return ok("the following restaurant is updated " +existingRes.getName()+existingRes.getCuisine()+existingRes.getNumber()+existingRes.getAddress()+existingRes.getHomePage()+ existingRes.getFbUrl()+existingRes.getWorkHours()+existingRes.getArea() +existingRes.getCollection() +existingRes.getLatitude()+existingRes.getLongitude()+existingRes.getImage() +existingRes.getDescription());
+                return ok("the following restaurant is updated " +existingRes.getName()+existingRes.getCuisine()+existingRes.getNumber()+existingRes.getAddress()+existingRes.getHomePage()+ existingRes.getFbUrl()+existingRes.getWorkHours()+existingRes.getArea() +existingRes.getCollection() +existingRes.getLatitude()+existingRes.getLongitude()+existingRes.getImage() +existingRes.getDescription() +existingRes.getOpening_time() +existingRes.getClosing_time() +existingRes.getFree_delivery() +existingRes.getCost());
             }
 
 
@@ -167,39 +175,28 @@ import javax.persistence.Query;
             }
 
             @Transactional
-            public Result getNearbyRestaurantsBySearch(String keyword) {
-                Query query=jpaApi.em().createNativeQuery("SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN NATURAL LANGUAGE MODE)");
-                query.setParameter(1,keyword);
-                List<Restaurant> rest = query.getResultList();
-                JsonNode json = Json.toJson(rest);
-                return ok(json);
-            }
-
-            @Transactional
-            public Result getNearbyRestaurantsByFilterSearch(String keyword,String cuisine,String collection) {
+            public Result getRestaurantsBySearchFilter(String keyword, String collection, Integer cost1, Integer cost2, Integer delivery) {
                 List<Restaurant> rest;
-                String[] arr= new String[4];
-                arr[2]= cuisine;
-                arr[3]= collection;
-                String[] names= {"Cuisine", "Collection_Type"};
-                String q="SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN NATURAL LANGUAGE MODE)";
+                String q1="";
+                Query query1;
+                String q = "SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN NATURAL LANGUAGE MODE)";
                 Query query = jpaApi.em().createNativeQuery(q);
                 query.setParameter(1, keyword);
                 rest = query.getResultList();
-                int i,j;
-                for ( i=2, j=0 ;i<arr.length && j<names.length ; i++) {
-                    if (arr[i] != null) {
-                        String q1 = "where " + names[j] + "= ?"+i;
-                        Query query1 = jpaApi.em().createNativeQuery("SELECT * from (" + q + ") AS T " + q1);
-                        query1.setParameter(1, keyword);
-                        query1.setParameter(i,arr[i]);
-                        Logger.debug(arr[i]);
-                        rest = query1.getResultList();
+                    if (null != collection && (null != cost1 && null != cost2) && null != delivery) {
+                        q1 = "where (Collection_Type= ?2 and Cost between ?3 and ?4 and Free_Delivery= ?5)";
+                    } else if (null != collection || (null != cost1 && null != cost2) || null != delivery) {
+                        q1 = "where (Collection_Type= ?2  or Cost between ?3 and ?4 or Free_Delivery= ?5)";
                     }
-                    JsonNode json = Json.toJson(rest);
-                    return ok(json);
-                }
-                JsonNode json = Json.toJson(rest);
+                    query1 = jpaApi.em().createNativeQuery("SELECT * from (" + q + ") AS T " + q1);
+                    query1.setParameter(1, keyword);
+                    query1.setParameter(2, collection);
+                    query1.setParameter(3, cost1);
+                    query1.setParameter(4, cost2);
+                    query1.setParameter(5, delivery);
+                    Logger.debug("------------------", query1);
+                    rest = query1.getResultList();
+                JsonNode json= Json.toJson(rest);
                 return ok(json);
             }
         }

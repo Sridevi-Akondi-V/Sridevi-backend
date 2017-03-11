@@ -1,43 +1,58 @@
-2017-03-10 15:31:16,798 [INFO] from application in ForkJoinPool-1-worker-2 - Creating Pool for datasource 'default'
-2017-03-10 15:31:17,385 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-2 - datasource [default] bound to JNDI as DefaultDS
-2017-03-10 15:31:17,400 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-2 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-10 15:31:20,538 [INFO] from play.api.Play in ForkJoinPool-1-worker-2 - Application started (Dev)
-2017-03-10 15:31:21,099 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - Breakfast
-2017-03-10 15:33:03,824 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2017-03-10 15:33:03,937 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2017-03-10 15:33:03,940 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-3 - datasource [default] bound to JNDI as DefaultDS
-2017-03-10 15:33:03,944 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-10 15:33:04,224 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2017-03-10 15:33:04,234 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - Cuisine
-2017-03-10 15:33:04,234 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - italian
-2017-03-10 15:33:32,389 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - Cuisine
-2017-03-10 15:33:32,389 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - Breakfast
-2017-03-10 15:33:48,528 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - Cuisine
-2017-03-10 15:33:48,528 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - italian
-2017-03-10 15:34:45,894 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
-2017-03-10 15:34:45,976 [INFO] from application in application-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
-2017-03-10 15:34:45,978 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-6 - datasource [default] bound to JNDI as DefaultDS
-2017-03-10 15:34:45,982 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-10 15:34:46,213 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
-2017-03-10 15:34:46,223 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - Cuisine
-2017-03-10 15:34:46,223 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - Breakfast
-2017-03-10 15:36:40,712 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - Cuisine
-2017-03-10 15:36:40,712 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - Breakfast
-2017-03-10 15:39:37,705 [DEBUG] from application in application-akka.actor.default-dispatcher-10 - Cuisine
-2017-03-10 15:39:37,705 [DEBUG] from application in application-akka.actor.default-dispatcher-10 - italian
-2017-03-10 15:39:37,706 [DEBUG] from application in application-akka.actor.default-dispatcher-10 - Cuisine
-2017-03-10 15:39:37,707 [DEBUG] from application in application-akka.actor.default-dispatcher-10 - Breakfast
-2017-03-10 15:39:51,354 [DEBUG] from application in application-akka.actor.default-dispatcher-12 - Cuisine
-2017-03-10 15:39:51,354 [DEBUG] from application in application-akka.actor.default-dispatcher-12 - italian
-2017-03-10 15:40:54,184 [ERROR] from application in netty-event-loop-4 - 
+2017-03-11 21:28:17,385 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2017-03-11 21:28:18,152 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
+2017-03-11 21:28:18,183 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-11 21:28:25,090 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2017-03-11 21:28:27,023 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - ------------------
+2017-03-11 21:29:24,524 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
+2017-03-11 21:29:24,856 [INFO] from application in application-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
+2017-03-11 21:29:24,865 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-6 - datasource [default] bound to JNDI as DefaultDS
+2017-03-11 21:29:24,873 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-11 21:29:25,672 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
+2017-03-11 21:29:25,741 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - ------------------
+2017-03-11 21:30:49,017 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2017-03-11 21:30:49,323 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2017-03-11 21:30:49,402 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-4 - datasource [default] bound to JNDI as DefaultDS
+2017-03-11 21:30:49,424 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-11 21:30:50,266 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2017-03-11 21:30:50,297 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - ------------------
+2017-03-11 21:33:23,847 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2017-03-11 21:33:24,083 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2017-03-11 21:33:24,246 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-4 - datasource [default] bound to JNDI as DefaultDS
+2017-03-11 21:33:24,517 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-11 21:33:25,973 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2017-03-11 21:33:26,272 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - ------------------
+2017-03-11 21:37:47,903 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2017-03-11 21:37:48,091 [INFO] from application in application-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
+2017-03-11 21:37:48,141 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-2 - datasource [default] bound to JNDI as DefaultDS
+2017-03-11 21:37:48,141 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-11 21:37:48,860 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
+2017-03-11 21:37:48,942 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - ------------------
+2017-03-11 21:39:12,185 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2017-03-11 21:39:12,408 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2017-03-11 21:39:12,423 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-3 - datasource [default] bound to JNDI as DefaultDS
+2017-03-11 21:39:12,470 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-11 21:39:13,164 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
+2017-03-11 21:39:13,248 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - ------------------
+2017-03-11 21:42:14,661 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2017-03-11 21:42:15,008 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2017-03-11 21:42:15,093 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-3 - datasource [default] bound to JNDI as DefaultDS
+2017-03-11 21:42:15,262 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-11 21:42:16,359 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
+2017-03-11 21:42:16,495 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - ------------------
+2017-03-11 21:45:15,816 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - ------------------
+2017-03-11 21:48:23,715 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - ------------------
+2017-03-11 21:49:02,615 [DEBUG] from application in application-akka.actor.default-dispatcher-11 - ------------------
+2017-03-11 21:52:17,573 [INFO] from application in application-akka.actor.default-dispatcher-12 - Shutting down connection pool.
+2017-03-11 21:52:17,931 [INFO] from application in application-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
+2017-03-11 21:52:18,141 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-12 - datasource [default] bound to JNDI as DefaultDS
+2017-03-11 21:52:18,224 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-12 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-11 21:52:19,675 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-12 - Application started (Dev)
+2017-03-11 21:52:19,706 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - ------------------
+2017-03-11 22:00:00,879 [ERROR] from application in netty-event-loop-6 - 
 
-! @73ae0fg5e - Internal server error, for (GET) [/restaurants_on_filter?keyword=Banjara&cuisine=italian] ->
+! @73an5bf1i - Internal server error, for (GET) [/filter?keyword=Banjara&collection=Breakfast] ->
  
-play.sbt.PlayExceptions$CompilationException: Compilation error[no suitable method found for debug(int)
-    method play.Logger.debug(java.lang.String) is not applicable
-      (argument mismatch; int cannot be converted to java.lang.String)
-    method play.Logger.debug(java.lang.String,java.lang.Object...) is not applicable
-      (argument mismatch; int cannot be converted to java.lang.String)]
+play.sbt.PlayExceptions$CompilationException: Compilation error[variable q1 might not have been initialized]
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
 	at scala.Option.map(Option.scala:145)
@@ -67,50 +82,196 @@ play.sbt.PlayExceptions$CompilationException: Compilation error[no suitable meth
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-2017-03-10 15:42:08,065 [INFO] from application in application-akka.actor.default-dispatcher-11 - Shutting down connection pool.
-2017-03-10 15:42:08,420 [INFO] from application in application-akka.actor.default-dispatcher-11 - Creating Pool for datasource 'default'
-2017-03-10 15:42:08,424 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-11 - datasource [default] bound to JNDI as DefaultDS
-2017-03-10 15:42:08,428 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-11 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-10 15:42:08,738 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-11 - Application started (Dev)
-2017-03-10 15:42:08,747 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - 
-2017-03-10 15:42:08,763 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - italian
-2017-03-10 15:42:27,355 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
-2017-03-10 15:42:27,434 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
-2017-03-10 15:42:27,437 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-5 - datasource [default] bound to JNDI as DefaultDS
-2017-03-10 15:42:27,440 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-10 15:42:27,576 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
-2017-03-10 15:42:27,585 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - -------------
-2017-03-10 15:42:27,585 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - italian
-2017-03-10 15:44:29,416 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
-2017-03-10 15:44:29,876 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2017-03-10 15:44:29,879 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-4 - datasource [default] bound to JNDI as DefaultDS
-2017-03-10 15:44:29,881 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-10 15:44:30,029 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
-2017-03-10 15:44:30,039 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - 
-2017-03-10 15:44:30,040 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - italian
-2017-03-10 15:46:32,796 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
-2017-03-10 15:46:33,153 [INFO] from application in application-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
-2017-03-10 15:46:33,156 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-6 - datasource [default] bound to JNDI as DefaultDS
-2017-03-10 15:46:33,160 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-10 15:46:33,290 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
-2017-03-10 15:46:33,299 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - italian
-2017-03-10 15:46:43,287 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - Breakfast
-2017-03-10 15:55:16,246 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2017-03-10 15:55:16,633 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2017-03-10 15:55:16,637 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-3 - datasource [default] bound to JNDI as DefaultDS
-2017-03-10 15:55:16,641 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-10 15:55:16,771 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2017-03-10 15:55:16,781 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - Sunday Brunch
-2017-03-10 15:56:16,639 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
-2017-03-10 15:56:16,691 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2017-03-10 15:56:16,695 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-4 - datasource [default] bound to JNDI as DefaultDS
-2017-03-10 15:56:16,699 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-10 15:56:16,829 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
-2017-03-10 15:56:16,839 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - Sunday Brunch
-2017-03-10 15:56:47,187 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
-2017-03-10 15:56:47,229 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
-2017-03-10 15:56:47,231 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-5 - datasource [default] bound to JNDI as DefaultDS
-2017-03-10 15:56:47,235 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-10 15:56:47,354 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
-2017-03-10 15:57:44,298 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - italian
-2017-03-10 16:10:11,612 [INFO] from application in pool-4-thread-5 - Shutting down connection pool.
+2017-03-11 22:03:13,052 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2017-03-11 22:03:13,538 [INFO] from application in application-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
+2017-03-11 22:03:13,817 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-2 - datasource [default] bound to JNDI as DefaultDS
+2017-03-11 22:03:13,857 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-11 22:03:15,362 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
+2017-03-11 22:03:15,515 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - ------------------
+2017-03-11 22:03:30,104 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - ------------------
+2017-03-11 22:04:35,114 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - ------------------
+2017-03-11 22:04:45,486 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - ------------------
+2017-03-11 22:05:10,196 [ERROR] from application in application-akka.actor.default-dispatcher-10 - 
+
+! @73an635a5 - Internal server error, for (GET) [/filter?keyword=Banjara&cost1=100&cost=500] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IllegalArgumentException: Parameter with that position [2] did not exist]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.scala$concurrent$impl$Promise$DefaultPromise$$dispatchOrAddCallback(Promise.scala:280)
+	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:270)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Parameter with that position [2] did not exist
+	at org.hibernate.jpa.spi.BaseQueryImpl.findParameterRegistration(BaseQueryImpl.java:502)
+	at org.hibernate.jpa.spi.BaseQueryImpl.setParameter(BaseQueryImpl.java:692)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:181)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:32)
+	at controllers.RestaurantController.getBySearchFilter(RestaurantController.java:228)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$12$$anonfun$apply$12.apply(Routes.scala:615)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$12$$anonfun$apply$12.apply(Routes.scala:615)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.db.jpa.TransactionalAction.lambda$call$4(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$3(DefaultJPAApi.java:196)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:137)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:195)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	... 13 common frames omitted
+2017-03-11 22:05:25,825 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - ------------------
+2017-03-11 22:05:59,688 [DEBUG] from application in application-akka.actor.default-dispatcher-12 - ------------------
+2017-03-11 22:10:34,672 [INFO] from application in application-akka.actor.default-dispatcher-13 - Shutting down connection pool.
+2017-03-11 22:10:37,258 [INFO] from application in application-akka.actor.default-dispatcher-13 - Creating Pool for datasource 'default'
+2017-03-11 22:10:38,420 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-13 - datasource [default] bound to JNDI as DefaultDS
+2017-03-11 22:10:38,505 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-13 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-11 22:10:40,121 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-13 - Application started (Dev)
+2017-03-11 22:10:40,190 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - ------------------
+2017-03-11 22:11:05,006 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - ------------------
+2017-03-11 22:11:39,679 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - ------------------
+2017-03-11 22:12:19,596 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - ------------------
+2017-03-11 22:12:33,647 [DEBUG] from application in application-akka.actor.default-dispatcher-13 - ------------------
+2017-03-11 22:12:52,259 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - ------------------
+2017-03-11 22:16:59,908 [INFO] from application in application-akka.actor.default-dispatcher-14 - Shutting down connection pool.
+2017-03-11 22:17:00,240 [INFO] from application in application-akka.actor.default-dispatcher-14 - Creating Pool for datasource 'default'
+2017-03-11 22:17:00,509 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-14 - datasource [default] bound to JNDI as DefaultDS
+2017-03-11 22:17:00,546 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-14 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-11 22:17:02,748 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-14 - Application started (Dev)
+2017-03-11 22:17:02,779 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - ------------------
+2017-03-11 22:17:29,677 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - ------------------
+2017-03-11 22:25:25,847 [ERROR] from application in netty-event-loop-3 - 
+
+! @73an8k9hp - Internal server error, for (GET) [/filter?keyword=Banjara&collection=Breakfast&cost1=500&cost2=1000&delivery=0] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[value getNearbyRestaurantsBySearch is not a member of controllers.RestaurantController]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:44)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:40)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at scala.util.Either$LeftProjection.map(Either.scala:377)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:17)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:339)
+	at play.runsupport.Reloader$$anon$3.run(Reloader.scala:44)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:40)
+	at play.runsupport.Reloader.reload(Reloader.scala:337)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:123)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:121)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2017-03-11 22:25:59,393 [ERROR] from application in netty-event-loop-4 - 
+
+! @73an8m786 - Internal server error, for (GET) [/filter?keyword=Banjara&collection=Breakfast&cost1=500&cost2=1000&delivery=0] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[value getNearbyRestaurantsBySearch is not a member of controllers.RestaurantController]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:44)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:40)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at scala.util.Either$LeftProjection.map(Either.scala:377)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:17)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:339)
+	at play.runsupport.Reloader$$anon$3.run(Reloader.scala:44)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:40)
+	at play.runsupport.Reloader.reload(Reloader.scala:337)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:123)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:121)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2017-03-11 22:26:56,263 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2017-03-11 22:26:56,844 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2017-03-11 22:26:57,213 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-3 - datasource [default] bound to JNDI as DefaultDS
+2017-03-11 22:26:57,280 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-11 22:26:58,367 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
+2017-03-11 22:26:58,399 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - ------------------
+2017-03-11 22:32:38,303 [INFO] from application in pool-4-thread-1 - Shutting down connection pool.

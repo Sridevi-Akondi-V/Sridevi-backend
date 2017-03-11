@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/sakondi/Desktop/Backend-Java/MyBranch/conf/routes
-// @DATE:Fri Mar 10 15:34:37 IST 2017
+// @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
+// @DATE:Sat Mar 11 22:26:35 IST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -32,28 +32,22 @@ package controllers {
       Call("PUT", _prefix + { _defaultPrefix } + "update_a_restaurant/" + implicitly[PathBindable[Integer]].unbind("id", id))
     }
   
-    // @LINE:27
-    def getNearbyRestaurantsByFilterSearch(keyword:java.lang.String, cuisine:java.lang.String = null, collection:java.lang.String = null): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "restaurants_on_filter" + queryString(List(Some(implicitly[QueryStringBindable[java.lang.String]].unbind("keyword", keyword)), if(cuisine == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("cuisine", cuisine)), if(collection == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("collection", collection)))))
-    }
-  
     // @LINE:11
     def getRestaurantByID(id:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "restaurants_by_id/" + implicitly[PathBindable[Integer]].unbind("id", id))
     }
   
-    // @LINE:26
-    def getNearbyRestaurantsBySearch(keyword:java.lang.String): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "search_restaurants/" + implicitly[PathBindable[java.lang.String]].unbind("keyword", keyword))
-    }
-  
     // @LINE:24
     def getRestaurantsFromSearchFilter(area:java.lang.String = null , restaurantname:java.lang.String = null): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "search_restaurants_by_name_area" + queryString(List(if(area == null ) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("area", area)), if(restaurantname == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("restaurantname", restaurantname)))))
+    }
+  
+    // @LINE:26
+    def getRestaurantsBySearchFilter(keyword:java.lang.String, collection:java.lang.String = null, cost1:Integer = null, cost2:Integer = null, delivery:Integer = null): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "filter" + queryString(List(Some(implicitly[QueryStringBindable[java.lang.String]].unbind("keyword", keyword)), if(collection == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("collection", collection)), if(cost1 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost1", cost1)), if(cost2 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost2", cost2)), if(delivery == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("delivery", delivery)))))
     }
   
     // @LINE:25
@@ -97,38 +91,38 @@ package controllers {
   
   }
 
-  // @LINE:44
+  // @LINE:43
   class ReverseCollectionController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:46
+    // @LINE:45
     def createCollection(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "collection")
     }
   
-    // @LINE:44
+    // @LINE:43
     def getCollectionsList(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "get_all_collections")
     }
   
-    // @LINE:48
+    // @LINE:47
     def deleteCollection(ctype:String): Call = {
       import ReverseRouteContext.empty
       Call("DELETE", _prefix + { _defaultPrefix } + "delete_collection/" + implicitly[PathBindable[String]].unbind("ctype", dynamicString(ctype)))
     }
   
-    // @LINE:47
+    // @LINE:46
     def updateCollection(ctype:String): Call = {
       import ReverseRouteContext.empty
       Call("PUT", _prefix + { _defaultPrefix } + "update_a_collection/" + implicitly[PathBindable[String]].unbind("ctype", dynamicString(ctype)))
     }
   
-    // @LINE:45
+    // @LINE:44
     def getCollectionByID(ctype:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "collections_by_id/" + implicitly[PathBindable[String]].unbind("ctype", dynamicString(ctype)))
@@ -136,20 +130,20 @@ package controllers {
   
   }
 
-  // @LINE:30
+  // @LINE:29
   class ReverseMemberController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:33
+    // @LINE:32
     def createMember(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "create_member")
     }
   
-    // @LINE:30
+    // @LINE:29
     def getMembersList(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "members_list")
@@ -157,26 +151,26 @@ package controllers {
   
   }
 
-  // @LINE:38
+  // @LINE:37
   class ReverseImageController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:39
+    // @LINE:38
     def downloadImage(id:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "images/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
     }
   
-    // @LINE:40
+    // @LINE:39
     def deleteImage(id:String): Call = {
       import ReverseRouteContext.empty
       Call("DELETE", _prefix + { _defaultPrefix } + "images/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
     }
   
-    // @LINE:38
+    // @LINE:37
     def uploadImage(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "images")
@@ -184,26 +178,26 @@ package controllers {
   
   }
 
-  // @LINE:57
+  // @LINE:56
   class ReverseUserController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:59
+    // @LINE:58
     def getCurrentUser(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "users/current")
     }
   
-    // @LINE:57
+    // @LINE:56
     def signIn(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "users/signin")
     }
   
-    // @LINE:58
+    // @LINE:57
     def signOut(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "users/signout")
@@ -211,14 +205,14 @@ package controllers {
   
   }
 
-  // @LINE:52
+  // @LINE:51
   class ReverseImagesController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:52
+    // @LINE:51
     def getImagesList(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "get_all_images")
