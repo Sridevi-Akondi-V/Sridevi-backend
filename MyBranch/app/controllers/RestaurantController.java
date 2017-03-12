@@ -16,11 +16,16 @@ import play.mvc.Result;
 
 import javax.persistence.Column;
 import javax.persistence.TypedQuery;
+import java.sql.Time;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
 import exceptions.NotFoundException;
 import static play.mvc.Controller.request;
+import static play.mvc.Http.Status.NOT_IMPLEMENTED;
 import static play.mvc.Results.badRequest;
 import static play.mvc.Results.notFound;
 import static play.mvc.Results.ok;
@@ -175,28 +180,52 @@ import javax.persistence.Query;
             }
 
             @Transactional
-            public Result getRestaurantsBySearchFilter(String keyword, String collection, Integer cost1, Integer cost2, Integer delivery) {
+            public Result getNearbyRestaurantsBySearch(String keyword) {
+                Query query=jpaApi.em().createNativeQuery("SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN NATURAL LANGUAGE MODE)");
+                query.setParameter(1,keyword);
+                List<Restaurant> rest = query.getResultList();
+                JsonNode json = Json.toJson(rest);
+                return ok(json);
+            }
+
+            @Transactional
+            public Result getRestaurantsBySearchFilter(String keyword, String collection, String time ,Integer cost1, Integer cost2, Integer delivery) {
                 List<Restaurant> rest;
                 String q1="";
                 Query query1;
+                JsonNode json;
+                Time time1 = new Time(-1,-1,-1);
+                if (time != null) {
+                    time1 = java.sql.Time.valueOf(time);
+                    Logger.debug("",time1.toString());
+                }
+                Logger.debug(time1.toString());
                 String q = "SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN NATURAL LANGUAGE MODE)";
-                Query query = jpaApi.em().createNativeQuery(q);
-                query.setParameter(1, keyword);
-                rest = query.getResultList();
-                    if (null != collection && (null != cost1 && null != cost2) && null != delivery) {
-                        q1 = "where (Collection_Type= ?2 and Cost between ?3 and ?4 and Free_Delivery= ?5)";
-                    } else if (null != collection || (null != cost1 && null != cost2) || null != delivery) {
-                        q1 = "where (Collection_Type= ?2  or Cost between ?3 and ?4 or Free_Delivery= ?5)";
+                if(null != keyword && null == collection && null== time && (null == cost1 && null == cost2) && null == delivery) {
+                    Query query = jpaApi.em().createNativeQuery(q);
+                    query.setParameter(1, keyword);
+                    Logger.debug("+",keyword);
+                    rest = query.getResultList();
+                    json= Json.toJson(rest);
+                    return ok(json);
+                }
+                    else {
+                    if (null != collection && null != time1 && (null != cost1 && null != cost2) && null != delivery) {
+                        q1 = "where (Collection_Type= ?2 and Opening_Time >= ?3 and Cost between ?4 and ?5 and Free_Delivery= ?6)";
+                    } else if (null != collection || (null!= time1)|| (null != cost1 && null != cost2) || null != delivery ) {
+                        q1 = "where (Collection_Type= ?2 or (Opening_Time >= ?3 and ?3 <= Closing_Time or Cost between ?4 and ?5 or Free_Delivery= ?6))";
                     }
                     query1 = jpaApi.em().createNativeQuery("SELECT * from (" + q + ") AS T " + q1);
                     query1.setParameter(1, keyword);
                     query1.setParameter(2, collection);
-                    query1.setParameter(3, cost1);
-                    query1.setParameter(4, cost2);
-                    query1.setParameter(5, delivery);
-                    Logger.debug("------------------", query1);
+                    query1.setParameter(3, time1);
+                    query1.setParameter(4, cost1);
+                    query1.setParameter(5, cost2);
+                    query1.setParameter(6, delivery);
+                    Logger.debug("-", query1.toString());
                     rest = query1.getResultList();
-                JsonNode json= Json.toJson(rest);
-                return ok(json);
+                    json = Json.toJson(rest);
+                    return ok(json);
+                }
             }
         }

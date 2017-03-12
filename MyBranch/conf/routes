@@ -23,7 +23,7 @@ DELETE   /rest/:id                                                              
 #Get all Restaurants based on a filter that searches by Restaurant Name or Restaurant Area
 GET     /search_restaurants_by_name_area                                            controllers.RestaurantController.getRestaurantsFromSearchFilter(area: java.lang.String ?=null , restaurantname: java.lang.String ?=null)
 GET     /search_nearby_restaurants/:latitude                                        controllers.RestaurantController.getNearbyRestaurants(latitude: java.lang.Double,longitude: java.lang.Double)
-GET     /filter                                                                     controllers.RestaurantController.getRestaurantsBySearchFilter(keyword: java.lang.String , collection: java.lang.String?= null, cost1: Integer?= null, cost2: Integer?= null, delivery: Integer?= null)
+GET     /filter                                                                     controllers.RestaurantController.getRestaurantsBySearchFilter(keyword: java.lang.String ?= null , collection: java.lang.String?= null, time: java.lang.String?= null , cost1: Integer?= null, cost2: Integer?= null, delivery: Integer?= null)
 
 #The members can be retrieved, created, updated and deleted
 GET      /members_list                                                             controllers.MemberController.getMembersList()

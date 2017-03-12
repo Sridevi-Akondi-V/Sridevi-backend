@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Sat Mar 11 22:26:35 IST 2017
+// @DATE:Sun Mar 12 19:37:52 IST 2017
 
 package router
 
@@ -72,7 +72,7 @@ class Routes(
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """rest/""" + "$" + """id<[^/]+>""", """controllers.RestaurantController.deleteRestAdmin(id:Integer)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search_restaurants_by_name_area""", """controllers.RestaurantController.getRestaurantsFromSearchFilter(area:java.lang.String ?= null , restaurantname:java.lang.String ?= null)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search_nearby_restaurants/""" + "$" + """latitude<[^/]+>""", """controllers.RestaurantController.getNearbyRestaurants(latitude:java.lang.Double, longitude:java.lang.Double)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """filter""", """controllers.RestaurantController.getRestaurantsBySearchFilter(keyword:java.lang.String, collection:java.lang.String ?= null, cost1:Integer ?= null, cost2:Integer ?= null, delivery:Integer ?= null)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """filter""", """controllers.RestaurantController.getRestaurantsBySearchFilter(keyword:java.lang.String ?= null , collection:java.lang.String ?= null, time:java.lang.String ?= null , cost1:Integer ?= null, cost2:Integer ?= null, delivery:Integer ?= null)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """members_list""", """controllers.MemberController.getMembersList()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """create_member""", """controllers.MemberController.createMember()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """images""", """controllers.ImageController.uploadImage()"""),
@@ -252,12 +252,12 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("filter")))
   )
   private[this] lazy val controllers_RestaurantController_getRestaurantsBySearchFilter9_invoker = createInvoker(
-    RestaurantController_1.getRestaurantsBySearchFilter(fakeValue[java.lang.String], fakeValue[java.lang.String], fakeValue[Integer], fakeValue[Integer], fakeValue[Integer]),
+    RestaurantController_1.getRestaurantsBySearchFilter(fakeValue[java.lang.String], fakeValue[java.lang.String], fakeValue[java.lang.String], fakeValue[Integer], fakeValue[Integer], fakeValue[Integer]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.RestaurantController",
       "getRestaurantsBySearchFilter",
-      Seq(classOf[java.lang.String], classOf[java.lang.String], classOf[Integer], classOf[Integer], classOf[Integer]),
+      Seq(classOf[java.lang.String], classOf[java.lang.String], classOf[java.lang.String], classOf[Integer], classOf[Integer], classOf[Integer]),
       "GET",
       """""",
       this.prefix + """filter"""
@@ -563,8 +563,8 @@ POST /users/signup                                                              
   
     // @LINE:26
     case controllers_RestaurantController_getRestaurantsBySearchFilter9_route(params) =>
-      call(params.fromQuery[java.lang.String]("keyword", None), params.fromQuery[java.lang.String]("collection", Some(null)), params.fromQuery[Integer]("cost1", Some(null)), params.fromQuery[Integer]("cost2", Some(null)), params.fromQuery[Integer]("delivery", Some(null))) { (keyword, collection, cost1, cost2, delivery) =>
-        controllers_RestaurantController_getRestaurantsBySearchFilter9_invoker.call(RestaurantController_1.getRestaurantsBySearchFilter(keyword, collection, cost1, cost2, delivery))
+      call(params.fromQuery[java.lang.String]("keyword", Some(null )), params.fromQuery[java.lang.String]("collection", Some(null)), params.fromQuery[java.lang.String]("time", Some(null )), params.fromQuery[Integer]("cost1", Some(null)), params.fromQuery[Integer]("cost2", Some(null)), params.fromQuery[Integer]("delivery", Some(null))) { (keyword, collection, time, cost1, cost2, delivery) =>
+        controllers_RestaurantController_getRestaurantsBySearchFilter9_invoker.call(RestaurantController_1.getRestaurantsBySearchFilter(keyword, collection, time, cost1, cost2, delivery))
       }
   
     // @LINE:29

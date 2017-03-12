@@ -64,7 +64,7 @@ public class Restaurant {
     private String description;
 
     @Column(name= "Opening_Time")
-    private Time opening_time;
+    private String opening_time;
 
     @Column(name= "Closing_Time")
     private Time closing_time;
@@ -80,7 +80,7 @@ public class Restaurant {
     }
 
 
-    public Restaurant (int id, String name, String cuisine, String number, String address, String homepage, String fburl, String workhours, String area, BigDecimal latitude, BigDecimal longitude , String imageurl, String description, Time opening_time, Time closing_time, Integer free_delivery, Integer cost) {
+    public Restaurant (int id, String name, String cuisine, String number, String address, String homepage, String fburl, String workhours, String area, BigDecimal latitude, BigDecimal longitude , String imageurl, String description, String opening_time, Time closing_time, Integer free_delivery, Integer cost) {
         this.id = id;
         this.name = name;
         this.cuisine = cuisine;
@@ -169,11 +169,11 @@ public class Restaurant {
         this.description=description;
     }
 
-    public Time getOpening_time() {
+    public String getOpening_time() {
         return opening_time;
     }
 
-    public void setOpening_time(Time opening_time) {
+    public void setOpening_time(String opening_time) {
         this.opening_time = opening_time;
     }
 
