@@ -3,18 +3,24 @@ package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.inject.Inject;
+import controllers.security.Authenticator;
 import models.Member;
+
 import play.Logger;
 import play.db.jpa.JPAApi;
 import play.db.jpa.Transactional;
 import play.libs.Json;
 import play.mvc.Result;
+
 import javax.persistence.TypedQuery;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+
 import java.util.List;
+
+
 import exceptions.NotFoundException;
 import services.UserService;
 
@@ -147,8 +153,8 @@ public class MemberController {
     }
 
 
-    /*
     @Transactional
+    @Authenticator
     public Result updateMember(Integer id){
         final JsonNode json=request().body().asJson();
         if(null==json){
@@ -158,20 +164,22 @@ public class MemberController {
         if(null==m){
             return badRequest("not found");
         }
-
         Member originalmember=jpaApi.em().find(Member.class,id);
-        originalmember.setUname(m.getUname());
+        originalmember.setEmail(m.getEmail());
+        originalmember.setPwd(m.getPwd());
+        originalmember.setDob(m.getDob());
+        originalmember.setUser_Address(m.getUser_Address());
         jpaApi.em().merge(originalmember);
-        return ok("the following member is updated"+originalmember.getUname());
+        return ok("the following member is updated"+ originalmember.getEmail() + originalmember.getPwd() + originalmember.getDob() + originalmember.getUser_Address() );
     }
 
-    @Transactional
+    /*@Transactional
     public Result deleteMember(Integer id){
         Member m=jpaApi.em().find(Member.class,id);
         jpaApi.em().remove(m);
         return ok();
-    }
-    */
+    } */
+
 
     /*
     public Result getAllMembers(){

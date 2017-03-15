@@ -49,17 +49,25 @@ public class Member {
     @JsonIgnore
     private Timestamp expTime;
 
+    @Column(name = "DOB")
+    private Date dob;
+
+    @Column(name = "User_Address")
+    private String User_Address;
+
     public Member() {
 
     }
 
 
-    public Member(int uid, String uname, String email, String pwd, Role role) {
+    public Member(int uid, String uname, String email, String pwd, Role role, Date dob, String User_Adress) {
         this.uid=uid;
         this.uname = uname;
         this.email = email;
         this.pwd = pwd;
         this.role = role;
+        this.dob = dob;
+        this.User_Address =User_Adress;
     }
 
 
@@ -100,5 +108,21 @@ public class Member {
     public Timestamp getExpTime() { return expTime; }
 
     public void setExpTime(Timestamp expTime) { this.expTime = expTime; }
+
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
+
+    public String getUser_Address() {
+        return User_Address;
+    }
+
+    public void setUser_Address(String user_Address) {
+        User_Address = user_Address;
+    }
 
 }

@@ -27,11 +27,13 @@ GET     /filter                                                                 
 
 #The members can be retrieved, created, updated and deleted
 GET      /members_list                                                             controllers.MemberController.getMembersList()
-#GET      /members/:id                                                              controllers.MemberController.getMemberByID(id: Integer)
-#GET      /authenticate_member_by_username_password/:username                        controllers.MemberController.getMemberByUsernamePassword(username: java.lang.String , password: java.lang.String ?=null)
+#GET      /members/:id                                                             controllers.MemberController.getMemberByID(id: Integer)
+#GET      /authenticate_member_by_username_password/:username                       controllers.MemberController.getMemberByUsernamePassword(username: java.lang.String , password: java.lang.String ?=null)
 POST     /create_member                                                             controllers.MemberController.createMember()
-#PUT      /update_members/:id                                                       controllers.MemberController.updateMember(id:Integer)
+PUT      /update_members/:id                                                        controllers.MemberController.updateMember(id:Integer)
 #DELETE   /delete_member/:id                                                        controllers.MemberController.deleteMember(id:Integer)
+
+
 
 # Image controller
 POST /images                                                                        controllers.ImageController.uploadImage()
@@ -52,7 +54,8 @@ GET     /get_all_images                                                         
 
 
 #User Controller
-#POST /users/signup                                                                  controllers.UserController.createUser()
+#POST /users/signup                                                                 controllers.UserController.createUser()
 GET /users/signin                                                                   controllers.UserController.signIn()
 GET /users/signout                                                                  controllers.UserController.signOut()
 GET /users/current                                                                  controllers.UserController.getCurrentUser()
+GET /users/users_dob                                                                controllers.UserController.userDob()
