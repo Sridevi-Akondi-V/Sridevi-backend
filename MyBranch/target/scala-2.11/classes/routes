@@ -59,3 +59,8 @@ GET /users/signin                                                               
 GET /users/signout                                                                  controllers.UserController.signOut()
 GET /users/current                                                                  controllers.UserController.getCurrentUser()
 GET /users/users_dob                                                                controllers.UserController.userDob()
+
+#User Ratings and Reviews
+POST  /users/rating                                                                 controllers.RatingController.postRatingRestaurants()
+GET   /avg_rating_restaurant                                                        controllers.RestaurantController.AvgRatingofRestaurant(id : Integer ?= null)
+GET   /rating_by_currentuser                                                        controllers.UserController.RatingsByCurrentUser(uid: Integer ?= null)

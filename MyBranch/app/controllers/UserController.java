@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import controllers.security.Authenticator;
 import controllers.security.IsAdmin;
 import models.Member;
+import models.Rating;
 import models.Restaurant;
 import org.joda.time.Years;
 import play.Logger;
@@ -125,4 +126,15 @@ public class UserController extends Controller {
         return ok(Json.toJson(json));
     }
 
+    @Transactional
+    @Authenticator
+    public Result RatingsByCurrentUser(Integer uid) {
+        List<Rating> ratingList;
+        String q = "SELECT tb_member.*,tb_restaurants.id ,(tb_ratings.Rating) AS rating_average  FROM mavericks_project.tb_ratings inner join tb_restaurants on tb_restaurants.id = tb_ratings.r_fid inner join tb_member on tb_member.uid = tb_ratings.u_fid where tb_member.uid = ?1";
+        Query query = jpaApi.em().createNativeQuery(q);
+        query.setParameter(1,uid);
+        ratingList = query.getResultList();
+        JsonNode json = Json.toJson(ratingList);
+        return ok(json);
+    }
 }

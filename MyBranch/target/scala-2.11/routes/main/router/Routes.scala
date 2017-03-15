@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Wed Mar 15 22:54:51 IST 2017
+// @DATE:Thu Mar 16 02:58:55 IST 2017
 
 package router
 
@@ -21,15 +21,17 @@ class Routes(
   // @LINE:10
   RestaurantController_1: controllers.RestaurantController,
   // @LINE:30
-  MemberController_5: controllers.MemberController,
+  MemberController_6: controllers.MemberController,
   // @LINE:39
   ImageController_0: controllers.ImageController,
   // @LINE:45
   CollectionController_3: controllers.CollectionController,
   // @LINE:53
-  ImagesController_6: controllers.ImagesController,
+  ImagesController_7: controllers.ImagesController,
   // @LINE:58
   UserController_2: controllers.UserController,
+  // @LINE:64
+  RatingController_5: controllers.RatingController,
   val prefix: String
 ) extends GeneratedRouter {
 
@@ -40,22 +42,24 @@ class Routes(
     // @LINE:10
     RestaurantController_1: controllers.RestaurantController,
     // @LINE:30
-    MemberController_5: controllers.MemberController,
+    MemberController_6: controllers.MemberController,
     // @LINE:39
     ImageController_0: controllers.ImageController,
     // @LINE:45
     CollectionController_3: controllers.CollectionController,
     // @LINE:53
-    ImagesController_6: controllers.ImagesController,
+    ImagesController_7: controllers.ImagesController,
     // @LINE:58
-    UserController_2: controllers.UserController
-  ) = this(errorHandler, Assets_4, RestaurantController_1, MemberController_5, ImageController_0, CollectionController_3, ImagesController_6, UserController_2, "/")
+    UserController_2: controllers.UserController,
+    // @LINE:64
+    RatingController_5: controllers.RatingController
+  ) = this(errorHandler, Assets_4, RestaurantController_1, MemberController_6, ImageController_0, CollectionController_3, ImagesController_7, UserController_2, RatingController_5, "/")
 
   import ReverseRouteContext.empty
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, Assets_4, RestaurantController_1, MemberController_5, ImageController_0, CollectionController_3, ImagesController_6, UserController_2, prefix)
+    new Routes(errorHandler, Assets_4, RestaurantController_1, MemberController_6, ImageController_0, CollectionController_3, ImagesController_7, UserController_2, RatingController_5, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -92,6 +96,9 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/signout""", """controllers.UserController.signOut()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/current""", """controllers.UserController.getCurrentUser()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/users_dob""", """controllers.UserController.userDob()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/rating""", """controllers.RatingController.postRatingRestaurants()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """avg_rating_restaurant""", """controllers.RestaurantController.AvgRatingofRestaurant(id:Integer ?= null)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """rating_by_currentuser""", """controllers.UserController.RatingsByCurrentUser(uid:Integer ?= null)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -291,7 +298,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("members_list")))
   )
   private[this] lazy val controllers_MemberController_getMembersList11_invoker = createInvoker(
-    MemberController_5.getMembersList(),
+    MemberController_6.getMembersList(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.MemberController",
@@ -308,7 +315,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("members/"), DynamicPart("id", """[^/]+""",true)))
   )
   private[this] lazy val controllers_MemberController_getMemberByID12_invoker = createInvoker(
-    MemberController_5.getMemberByID(fakeValue[Integer]),
+    MemberController_6.getMemberByID(fakeValue[Integer]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.MemberController",
@@ -325,7 +332,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("create_member")))
   )
   private[this] lazy val controllers_MemberController_createMember13_invoker = createInvoker(
-    MemberController_5.createMember(),
+    MemberController_6.createMember(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.MemberController",
@@ -342,7 +349,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("update_members/"), DynamicPart("id", """[^/]+""",true)))
   )
   private[this] lazy val controllers_MemberController_updateMember14_invoker = createInvoker(
-    MemberController_5.updateMember(fakeValue[Integer]),
+    MemberController_6.updateMember(fakeValue[Integer]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.MemberController",
@@ -359,7 +366,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("delete_member/"), DynamicPart("id", """[^/]+""",true)))
   )
   private[this] lazy val controllers_MemberController_deleteMember15_invoker = createInvoker(
-    MemberController_5.deleteMember(fakeValue[Integer]),
+    MemberController_6.deleteMember(fakeValue[Integer]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.MemberController",
@@ -512,7 +519,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("get_all_images")))
   )
   private[this] lazy val controllers_ImagesController_getImagesList24_invoker = createInvoker(
-    ImagesController_6.getImagesList(),
+    ImagesController_7.getImagesList(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.ImagesController",
@@ -593,6 +600,57 @@ POST /users/signup                                                              
     )
   )
 
+  // @LINE:64
+  private[this] lazy val controllers_RatingController_postRatingRestaurants29_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("users/rating")))
+  )
+  private[this] lazy val controllers_RatingController_postRatingRestaurants29_invoker = createInvoker(
+    RatingController_5.postRatingRestaurants(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RatingController",
+      "postRatingRestaurants",
+      Nil,
+      "POST",
+      """User Ratings and Reviews""",
+      this.prefix + """users/rating"""
+    )
+  )
+
+  // @LINE:65
+  private[this] lazy val controllers_RestaurantController_AvgRatingofRestaurant30_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("avg_rating_restaurant")))
+  )
+  private[this] lazy val controllers_RestaurantController_AvgRatingofRestaurant30_invoker = createInvoker(
+    RestaurantController_1.AvgRatingofRestaurant(fakeValue[Integer]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RestaurantController",
+      "AvgRatingofRestaurant",
+      Seq(classOf[Integer]),
+      "GET",
+      """""",
+      this.prefix + """avg_rating_restaurant"""
+    )
+  )
+
+  // @LINE:66
+  private[this] lazy val controllers_UserController_RatingsByCurrentUser31_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("rating_by_currentuser")))
+  )
+  private[this] lazy val controllers_UserController_RatingsByCurrentUser31_invoker = createInvoker(
+    UserController_2.RatingsByCurrentUser(fakeValue[Integer]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.UserController",
+      "RatingsByCurrentUser",
+      Seq(classOf[Integer]),
+      "GET",
+      """""",
+      this.prefix + """rating_by_currentuser"""
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -665,31 +723,31 @@ POST /users/signup                                                              
     // @LINE:30
     case controllers_MemberController_getMembersList11_route(params) =>
       call { 
-        controllers_MemberController_getMembersList11_invoker.call(MemberController_5.getMembersList())
+        controllers_MemberController_getMembersList11_invoker.call(MemberController_6.getMembersList())
       }
   
     // @LINE:31
     case controllers_MemberController_getMemberByID12_route(params) =>
       call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_MemberController_getMemberByID12_invoker.call(MemberController_5.getMemberByID(id))
+        controllers_MemberController_getMemberByID12_invoker.call(MemberController_6.getMemberByID(id))
       }
   
     // @LINE:32
     case controllers_MemberController_createMember13_route(params) =>
       call { 
-        controllers_MemberController_createMember13_invoker.call(MemberController_5.createMember())
+        controllers_MemberController_createMember13_invoker.call(MemberController_6.createMember())
       }
   
     // @LINE:33
     case controllers_MemberController_updateMember14_route(params) =>
       call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_MemberController_updateMember14_invoker.call(MemberController_5.updateMember(id))
+        controllers_MemberController_updateMember14_invoker.call(MemberController_6.updateMember(id))
       }
   
     // @LINE:34
     case controllers_MemberController_deleteMember15_route(params) =>
       call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_MemberController_deleteMember15_invoker.call(MemberController_5.deleteMember(id))
+        controllers_MemberController_deleteMember15_invoker.call(MemberController_6.deleteMember(id))
       }
   
     // @LINE:39
@@ -743,7 +801,7 @@ POST /users/signup                                                              
     // @LINE:53
     case controllers_ImagesController_getImagesList24_route(params) =>
       call { 
-        controllers_ImagesController_getImagesList24_invoker.call(ImagesController_6.getImagesList())
+        controllers_ImagesController_getImagesList24_invoker.call(ImagesController_7.getImagesList())
       }
   
     // @LINE:58
@@ -768,6 +826,24 @@ POST /users/signup                                                              
     case controllers_UserController_userDob28_route(params) =>
       call { 
         controllers_UserController_userDob28_invoker.call(UserController_2.userDob())
+      }
+  
+    // @LINE:64
+    case controllers_RatingController_postRatingRestaurants29_route(params) =>
+      call { 
+        controllers_RatingController_postRatingRestaurants29_invoker.call(RatingController_5.postRatingRestaurants())
+      }
+  
+    // @LINE:65
+    case controllers_RestaurantController_AvgRatingofRestaurant30_route(params) =>
+      call(params.fromQuery[Integer]("id", Some(null))) { (id) =>
+        controllers_RestaurantController_AvgRatingofRestaurant30_invoker.call(RestaurantController_1.AvgRatingofRestaurant(id))
+      }
+  
+    // @LINE:66
+    case controllers_UserController_RatingsByCurrentUser31_route(params) =>
+      call(params.fromQuery[Integer]("uid", Some(null))) { (uid) =>
+        controllers_UserController_RatingsByCurrentUser31_invoker.call(UserController_2.RatingsByCurrentUser(uid))
       }
   }
 }

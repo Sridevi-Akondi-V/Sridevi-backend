@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Wed Mar 15 22:54:51 IST 2017
+// @DATE:Thu Mar 16 02:58:55 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -39,6 +39,16 @@ package controllers.javascript {
       """
         function(keyword0,collection1,time2,cost13,cost24,delivery5) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "filter" + _qS([(keyword0 == null ? null : (""" + implicitly[QueryStringBindable[java.lang.String]].javascriptUnbind + """)("keyword", keyword0)), (collection1 == null ? null : (""" + implicitly[QueryStringBindable[java.lang.String]].javascriptUnbind + """)("collection", collection1)), (time2 == null ? null : (""" + implicitly[QueryStringBindable[java.lang.String]].javascriptUnbind + """)("time", time2)), (cost13 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("cost1", cost13)), (cost24 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("cost2", cost24)), (delivery5 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("delivery", delivery5))])})
+        }
+      """
+    )
+  
+    // @LINE:65
+    def AvgRatingofRestaurant: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RestaurantController.AvgRatingofRestaurant",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "avg_rating_restaurant" + _qS([(id0 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("id", id0))])})
         }
       """
     )
@@ -323,16 +333,6 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:58
-    def signIn: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.UserController.signIn",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/signin"})
-        }
-      """
-    )
-  
     // @LINE:59
     def signOut: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UserController.signOut",
@@ -349,6 +349,46 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/users_dob"})
+        }
+      """
+    )
+  
+    // @LINE:66
+    def RatingsByCurrentUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.UserController.RatingsByCurrentUser",
+      """
+        function(uid0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "rating_by_currentuser" + _qS([(uid0 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("uid", uid0))])})
+        }
+      """
+    )
+  
+    // @LINE:58
+    def signIn: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.UserController.signIn",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/signin"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:64
+  class ReverseRatingController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:64
+    def postRatingRestaurants: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RatingController.postRatingRestaurants",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "users/rating"})
         }
       """
     )

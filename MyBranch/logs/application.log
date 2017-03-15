@@ -1,14 +1,110 @@
-2017-03-15 22:55:48,041 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2017-03-15 22:55:49,105 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
-2017-03-15 22:55:49,180 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-15 22:55:55,493 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2017-03-15 22:58:07,238 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
-2017-03-15 22:58:07,637 [INFO] from application in application-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
-2017-03-15 22:58:07,658 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-6 - datasource [default] bound to JNDI as DefaultDS
-2017-03-15 22:58:07,682 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-15 22:58:08,557 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
-2017-03-15 22:58:08,646 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - 22:58:59
-2017-03-15 22:58:08,646 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - +
-2017-03-15 22:58:15,207 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - 22:58:59
-2017-03-15 22:58:15,207 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - +
-2017-03-15 23:09:00,817 [INFO] from application in pool-4-thread-3 - Shutting down connection pool.
+2017-03-16 03:15:08,958 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2017-03-16 03:15:09,374 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
+2017-03-16 03:15:09,399 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-16 03:15:12,981 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2017-03-16 03:15:13,436 [INFO] from application in application-akka.actor.default-dispatcher-5 - Running AuthenticatorAction
+2017-03-16 03:15:13,451 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - Authorized header: Bearer 4980bef9-a163-4eb7-801f-aa532f6cffc5
+2017-03-16 03:15:13,451 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - auth_token: 4980bef9-a163-4eb7-801f-aa532f6cffc5
+2017-03-16 03:15:13,451 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - 4980bef9-a163-4eb7-801f-aa532f6cffc5
+2017-03-16 03:15:13,451 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - SELECT m FROM Member m where m.authToken='4980bef9-a163-4eb7-801f-aa532f6cffc5'
+2017-03-16 03:15:13,735 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - org.hibernate.jpa.internal.QueryImpl@6b252041
+2017-03-16 03:15:13,829 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - [models.Member@12730fe7]
+2017-03-16 03:15:13,829 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - member: models.Member@12730fe7
+2017-03-16 03:15:13,958 [ERROR] from application in application-akka.actor.default-dispatcher-5 - 
+
+! @73c1n2m8o - Internal server error, for (POST) [/users/rating] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IllegalArgumentException: Unknown entity: models.Rating]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.filters.cors.AbstractCORSPolicy$$anonfun$2.applyOrElse(AbstractCORSPolicy.scala:146)
+	at play.filters.cors.AbstractCORSPolicy$$anonfun$2.applyOrElse(AbstractCORSPolicy.scala:145)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:83)
+	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:77)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Unknown entity: models.Rating
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.merge(AbstractEntityManagerImpl.java:1167)
+	at controllers.RatingController.postRatingRestaurants(RatingController.java:48)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$30$$anonfun$apply$30.apply(Routes.scala:834)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$30$$anonfun$apply$30.apply(Routes.scala:834)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at controllers.security.AuthenticatorAction.call(AuthenticatorAction.java:52)
+	at play.db.jpa.TransactionalAction.lambda$call$4(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$3(DefaultJPAApi.java:196)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:137)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:195)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	... 13 common frames omitted
+Caused by: org.hibernate.MappingException: Unknown entity: models.Rating
+	at org.hibernate.internal.SessionFactoryImpl.getEntityPersister(SessionFactoryImpl.java:776)
+	at org.hibernate.internal.SessionImpl.getEntityPersister(SessionImpl.java:1533)
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:146)
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:68)
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:843)
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:825)
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:830)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.merge(AbstractEntityManagerImpl.java:1161)
+	... 47 common frames omitted
+2017-03-16 03:18:55,675 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2017-03-16 03:18:55,927 [INFO] from application in application-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
+2017-03-16 03:18:55,943 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-2 - datasource [default] bound to JNDI as DefaultDS
+2017-03-16 03:18:55,960 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-16 03:18:57,019 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
+2017-03-16 03:18:57,086 [INFO] from application in application-akka.actor.default-dispatcher-4 - Running AuthenticatorAction
+2017-03-16 03:18:57,087 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - Authorized header: Bearer 4980bef9-a163-4eb7-801f-aa532f6cffc5
+2017-03-16 03:18:57,088 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - auth_token: 4980bef9-a163-4eb7-801f-aa532f6cffc5
+2017-03-16 03:18:57,088 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - 4980bef9-a163-4eb7-801f-aa532f6cffc5
+2017-03-16 03:18:57,088 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - SELECT m FROM Member m where m.authToken='4980bef9-a163-4eb7-801f-aa532f6cffc5'
+2017-03-16 03:18:57,094 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - org.hibernate.jpa.internal.QueryImpl@7a327b49
+2017-03-16 03:18:57,096 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - [models.Member@7e7c65d2]
+2017-03-16 03:18:57,096 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - member: models.Member@7e7c65d2
+2017-03-16 03:20:36,162 [INFO] from application in pool-4-thread-6 - Shutting down connection pool.

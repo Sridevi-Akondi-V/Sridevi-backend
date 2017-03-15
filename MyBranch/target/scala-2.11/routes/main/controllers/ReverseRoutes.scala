@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Wed Mar 15 22:54:51 IST 2017
+// @DATE:Thu Mar 16 02:58:55 IST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -30,6 +30,12 @@ package controllers {
     def getRestaurantsBySearchFilter(keyword:java.lang.String = null , collection:java.lang.String = null, time:java.lang.String = null , cost1:Integer = null, cost2:Integer = null, delivery:Integer = null): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "filter" + queryString(List(if(keyword == null ) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("keyword", keyword)), if(collection == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("collection", collection)), if(time == null ) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("time", time)), if(cost1 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost1", cost1)), if(cost2 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost2", cost2)), if(delivery == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("delivery", delivery)))))
+    }
+  
+    // @LINE:65
+    def AvgRatingofRestaurant(id:Integer = null): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "avg_rating_restaurant" + queryString(List(if(id == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("id", id)))))
     }
   
     // @LINE:19
@@ -215,12 +221,6 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "users/current")
     }
   
-    // @LINE:58
-    def signIn(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "users/signin")
-    }
-  
     // @LINE:59
     def signOut(): Call = {
       import ReverseRouteContext.empty
@@ -231,6 +231,33 @@ package controllers {
     def userDob(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "users/users_dob")
+    }
+  
+    // @LINE:66
+    def RatingsByCurrentUser(uid:Integer = null): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "rating_by_currentuser" + queryString(List(if(uid == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("uid", uid)))))
+    }
+  
+    // @LINE:58
+    def signIn(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "users/signin")
+    }
+  
+  }
+
+  // @LINE:64
+  class ReverseRatingController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:64
+    def postRatingRestaurants(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "users/rating")
     }
   
   }
