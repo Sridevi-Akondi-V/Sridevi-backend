@@ -5,6 +5,7 @@ import controllers.security.Authenticator;
 import controllers.security.IsAdmin;
 import models.Member;
 import models.Restaurant;
+import org.joda.time.Years;
 import play.Logger;
 import play.db.jpa.JPAApi;
 import play.db.jpa.Transactional;
@@ -18,10 +19,13 @@ import javax.persistence.Query;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
+
+/* Created by Sridevi Akondi*/
 
 public class UserController extends Controller {
 
@@ -75,22 +79,22 @@ public class UserController extends Controller {
     @Authenticator
     public Result userDob() {
         final Member m= (Member) ctx().args.get("user");
+        JsonNode json2;
         Date today = new Date();
         LocalDate localDate = today.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         LocalDate dob = m.getDob().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        /*Logger.debug(today.toString());
-        Logger.debug(m.getDob().toString());
-        Logger.debug(String.valueOf(dob.getMonthValue())); */
+        int age= Period.between(dob,localDate).getYears();
+        Logger.debug(String.valueOf(age));
         if( localDate.getMonth() == dob.getMonth() && localDate.getDayOfMonth() == dob.getDayOfMonth()) {
                 String q = "SELECT * FROM mavericks_project.tb_restaurants;";
                 Query query1 = jpaApi.em().createNativeQuery(q);
                 List<Restaurant> rest = query1.getResultList();
                 int id = ThreadLocalRandom.current().nextInt(1, rest.size() + 1);
-                Logger.debug(String.valueOf(rest.size()));
-                Logger.debug(String.valueOf(id));
                 Restaurant i = jpaApi.em().find(Restaurant.class, id);
                 JsonNode json1 = Json.toJson(i);
-                return ok(json1);
+                json2=Json.toJson(age);
+            String bothJson = "["+json1+","+json2+"]"; //Put both objects in an array of 2 elements
+            return ok(bothJson);
         }
         return  ok();
     }

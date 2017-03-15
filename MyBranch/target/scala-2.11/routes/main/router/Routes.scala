@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Wed Mar 15 16:05:40 IST 2017
+// @DATE:Wed Mar 15 22:54:51 IST 2017
 
 package router
 
@@ -20,7 +20,7 @@ class Routes(
   Assets_4: controllers.Assets,
   // @LINE:10
   RestaurantController_1: controllers.RestaurantController,
-  // @LINE:29
+  // @LINE:30
   MemberController_5: controllers.MemberController,
   // @LINE:39
   ImageController_0: controllers.ImageController,
@@ -39,7 +39,7 @@ class Routes(
     Assets_4: controllers.Assets,
     // @LINE:10
     RestaurantController_1: controllers.RestaurantController,
-    // @LINE:29
+    // @LINE:30
     MemberController_5: controllers.MemberController,
     // @LINE:39
     ImageController_0: controllers.ImageController,
@@ -73,9 +73,12 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search_restaurants_by_name_area""", """controllers.RestaurantController.getRestaurantsFromSearchFilter(area:java.lang.String ?= null , restaurantname:java.lang.String ?= null)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search_nearby_restaurants/""" + "$" + """latitude<[^/]+>""", """controllers.RestaurantController.getNearbyRestaurants(latitude:java.lang.Double, longitude:java.lang.Double)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """filter""", """controllers.RestaurantController.getRestaurantsBySearchFilter(keyword:java.lang.String ?= null , collection:java.lang.String ?= null, time:java.lang.String ?= null , cost1:Integer ?= null, cost2:Integer ?= null, delivery:Integer ?= null)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search/""" + "$" + """keyword<[^/]+>""", """controllers.RestaurantController.getNearbyRestaurantsBySearch(keyword:java.lang.String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """members_list""", """controllers.MemberController.getMembersList()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """members/""" + "$" + """id<[^/]+>""", """controllers.MemberController.getMemberByID(id:Integer)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """create_member""", """controllers.MemberController.createMember()"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """update_members/""" + "$" + """id<[^/]+>""", """controllers.MemberController.updateMember(id:Integer)"""),
+    ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """delete_member/""" + "$" + """id<[^/]+>""", """controllers.MemberController.deleteMember(id:Integer)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """images""", """controllers.ImageController.uploadImage()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """images/""" + "$" + """id<[^/]+>""", """controllers.ImageController.downloadImage(id:String)"""),
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """images/""" + "$" + """id<[^/]+>""", """controllers.ImageController.deleteImage(id:String)"""),
@@ -266,11 +269,28 @@ class Routes(
     )
   )
 
-  // @LINE:29
-  private[this] lazy val controllers_MemberController_getMembersList10_route = Route("GET",
+  // @LINE:27
+  private[this] lazy val controllers_RestaurantController_getNearbyRestaurantsBySearch10_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("search/"), DynamicPart("keyword", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_RestaurantController_getNearbyRestaurantsBySearch10_invoker = createInvoker(
+    RestaurantController_1.getNearbyRestaurantsBySearch(fakeValue[java.lang.String]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RestaurantController",
+      "getNearbyRestaurantsBySearch",
+      Seq(classOf[java.lang.String]),
+      "GET",
+      """""",
+      this.prefix + """search/""" + "$" + """keyword<[^/]+>"""
+    )
+  )
+
+  // @LINE:30
+  private[this] lazy val controllers_MemberController_getMembersList11_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("members_list")))
   )
-  private[this] lazy val controllers_MemberController_getMembersList10_invoker = createInvoker(
+  private[this] lazy val controllers_MemberController_getMembersList11_invoker = createInvoker(
     MemberController_5.getMembersList(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -283,11 +303,28 @@ class Routes(
     )
   )
 
+  // @LINE:31
+  private[this] lazy val controllers_MemberController_getMemberByID12_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("members/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_MemberController_getMemberByID12_invoker = createInvoker(
+    MemberController_5.getMemberByID(fakeValue[Integer]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.MemberController",
+      "getMemberByID",
+      Seq(classOf[Integer]),
+      "GET",
+      """""",
+      this.prefix + """members/""" + "$" + """id<[^/]+>"""
+    )
+  )
+
   // @LINE:32
-  private[this] lazy val controllers_MemberController_createMember11_route = Route("POST",
+  private[this] lazy val controllers_MemberController_createMember13_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("create_member")))
   )
-  private[this] lazy val controllers_MemberController_createMember11_invoker = createInvoker(
+  private[this] lazy val controllers_MemberController_createMember13_invoker = createInvoker(
     MemberController_5.createMember(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -295,17 +332,16 @@ class Routes(
       "createMember",
       Nil,
       "POST",
-      """GET      /members/:id                                                             controllers.MemberController.getMemberByID(id: Integer)
-GET      /authenticate_member_by_username_password/:username                       controllers.MemberController.getMemberByUsernamePassword(username: java.lang.String , password: java.lang.String ?=null)""",
+      """""",
       this.prefix + """create_member"""
     )
   )
 
   // @LINE:33
-  private[this] lazy val controllers_MemberController_updateMember12_route = Route("PUT",
+  private[this] lazy val controllers_MemberController_updateMember14_route = Route("PUT",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("update_members/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_MemberController_updateMember12_invoker = createInvoker(
+  private[this] lazy val controllers_MemberController_updateMember14_invoker = createInvoker(
     MemberController_5.updateMember(fakeValue[Integer]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -318,11 +354,28 @@ GET      /authenticate_member_by_username_password/:username                    
     )
   )
 
+  // @LINE:34
+  private[this] lazy val controllers_MemberController_deleteMember15_route = Route("DELETE",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("delete_member/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_MemberController_deleteMember15_invoker = createInvoker(
+    MemberController_5.deleteMember(fakeValue[Integer]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.MemberController",
+      "deleteMember",
+      Seq(classOf[Integer]),
+      "DELETE",
+      """""",
+      this.prefix + """delete_member/""" + "$" + """id<[^/]+>"""
+    )
+  )
+
   // @LINE:39
-  private[this] lazy val controllers_ImageController_uploadImage13_route = Route("POST",
+  private[this] lazy val controllers_ImageController_uploadImage16_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("images")))
   )
-  private[this] lazy val controllers_ImageController_uploadImage13_invoker = createInvoker(
+  private[this] lazy val controllers_ImageController_uploadImage16_invoker = createInvoker(
     ImageController_0.uploadImage(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -336,10 +389,10 @@ GET      /authenticate_member_by_username_password/:username                    
   )
 
   // @LINE:40
-  private[this] lazy val controllers_ImageController_downloadImage14_route = Route("GET",
+  private[this] lazy val controllers_ImageController_downloadImage17_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("images/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_ImageController_downloadImage14_invoker = createInvoker(
+  private[this] lazy val controllers_ImageController_downloadImage17_invoker = createInvoker(
     ImageController_0.downloadImage(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -353,10 +406,10 @@ GET      /authenticate_member_by_username_password/:username                    
   )
 
   // @LINE:41
-  private[this] lazy val controllers_ImageController_deleteImage15_route = Route("DELETE",
+  private[this] lazy val controllers_ImageController_deleteImage18_route = Route("DELETE",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("images/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_ImageController_deleteImage15_invoker = createInvoker(
+  private[this] lazy val controllers_ImageController_deleteImage18_invoker = createInvoker(
     ImageController_0.deleteImage(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -370,10 +423,10 @@ GET      /authenticate_member_by_username_password/:username                    
   )
 
   // @LINE:45
-  private[this] lazy val controllers_CollectionController_getCollectionsList16_route = Route("GET",
+  private[this] lazy val controllers_CollectionController_getCollectionsList19_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("get_all_collections")))
   )
-  private[this] lazy val controllers_CollectionController_getCollectionsList16_invoker = createInvoker(
+  private[this] lazy val controllers_CollectionController_getCollectionsList19_invoker = createInvoker(
     CollectionController_3.getCollectionsList(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -387,10 +440,10 @@ GET      /authenticate_member_by_username_password/:username                    
   )
 
   // @LINE:46
-  private[this] lazy val controllers_CollectionController_getCollectionByID17_route = Route("GET",
+  private[this] lazy val controllers_CollectionController_getCollectionByID20_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("collections_by_id/"), DynamicPart("ctype", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_CollectionController_getCollectionByID17_invoker = createInvoker(
+  private[this] lazy val controllers_CollectionController_getCollectionByID20_invoker = createInvoker(
     CollectionController_3.getCollectionByID(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -404,10 +457,10 @@ GET      /authenticate_member_by_username_password/:username                    
   )
 
   // @LINE:47
-  private[this] lazy val controllers_CollectionController_createCollection18_route = Route("POST",
+  private[this] lazy val controllers_CollectionController_createCollection21_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("collection")))
   )
-  private[this] lazy val controllers_CollectionController_createCollection18_invoker = createInvoker(
+  private[this] lazy val controllers_CollectionController_createCollection21_invoker = createInvoker(
     CollectionController_3.createCollection(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -421,10 +474,10 @@ GET      /authenticate_member_by_username_password/:username                    
   )
 
   // @LINE:48
-  private[this] lazy val controllers_CollectionController_updateCollection19_route = Route("PUT",
+  private[this] lazy val controllers_CollectionController_updateCollection22_route = Route("PUT",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("update_a_collection/"), DynamicPart("ctype", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_CollectionController_updateCollection19_invoker = createInvoker(
+  private[this] lazy val controllers_CollectionController_updateCollection22_invoker = createInvoker(
     CollectionController_3.updateCollection(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -438,10 +491,10 @@ GET      /authenticate_member_by_username_password/:username                    
   )
 
   // @LINE:49
-  private[this] lazy val controllers_CollectionController_deleteCollection20_route = Route("DELETE",
+  private[this] lazy val controllers_CollectionController_deleteCollection23_route = Route("DELETE",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("delete_collection/"), DynamicPart("ctype", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_CollectionController_deleteCollection20_invoker = createInvoker(
+  private[this] lazy val controllers_CollectionController_deleteCollection23_invoker = createInvoker(
     CollectionController_3.deleteCollection(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -455,10 +508,10 @@ GET      /authenticate_member_by_username_password/:username                    
   )
 
   // @LINE:53
-  private[this] lazy val controllers_ImagesController_getImagesList21_route = Route("GET",
+  private[this] lazy val controllers_ImagesController_getImagesList24_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("get_all_images")))
   )
-  private[this] lazy val controllers_ImagesController_getImagesList21_invoker = createInvoker(
+  private[this] lazy val controllers_ImagesController_getImagesList24_invoker = createInvoker(
     ImagesController_6.getImagesList(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -472,10 +525,10 @@ GET      /authenticate_member_by_username_password/:username                    
   )
 
   // @LINE:58
-  private[this] lazy val controllers_UserController_signIn22_route = Route("GET",
+  private[this] lazy val controllers_UserController_signIn25_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("users/signin")))
   )
-  private[this] lazy val controllers_UserController_signIn22_invoker = createInvoker(
+  private[this] lazy val controllers_UserController_signIn25_invoker = createInvoker(
     UserController_2.signIn(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -490,10 +543,10 @@ POST /users/signup                                                              
   )
 
   // @LINE:59
-  private[this] lazy val controllers_UserController_signOut23_route = Route("GET",
+  private[this] lazy val controllers_UserController_signOut26_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("users/signout")))
   )
-  private[this] lazy val controllers_UserController_signOut23_invoker = createInvoker(
+  private[this] lazy val controllers_UserController_signOut26_invoker = createInvoker(
     UserController_2.signOut(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -507,10 +560,10 @@ POST /users/signup                                                              
   )
 
   // @LINE:60
-  private[this] lazy val controllers_UserController_getCurrentUser24_route = Route("GET",
+  private[this] lazy val controllers_UserController_getCurrentUser27_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("users/current")))
   )
-  private[this] lazy val controllers_UserController_getCurrentUser24_invoker = createInvoker(
+  private[this] lazy val controllers_UserController_getCurrentUser27_invoker = createInvoker(
     UserController_2.getCurrentUser(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -524,10 +577,10 @@ POST /users/signup                                                              
   )
 
   // @LINE:61
-  private[this] lazy val controllers_UserController_userDob25_route = Route("GET",
+  private[this] lazy val controllers_UserController_userDob28_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("users/users_dob")))
   )
-  private[this] lazy val controllers_UserController_userDob25_invoker = createInvoker(
+  private[this] lazy val controllers_UserController_userDob28_invoker = createInvoker(
     UserController_2.userDob(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -603,100 +656,118 @@ POST /users/signup                                                              
         controllers_RestaurantController_getRestaurantsBySearchFilter9_invoker.call(RestaurantController_1.getRestaurantsBySearchFilter(keyword, collection, time, cost1, cost2, delivery))
       }
   
-    // @LINE:29
-    case controllers_MemberController_getMembersList10_route(params) =>
+    // @LINE:27
+    case controllers_RestaurantController_getNearbyRestaurantsBySearch10_route(params) =>
+      call(params.fromPath[java.lang.String]("keyword", None)) { (keyword) =>
+        controllers_RestaurantController_getNearbyRestaurantsBySearch10_invoker.call(RestaurantController_1.getNearbyRestaurantsBySearch(keyword))
+      }
+  
+    // @LINE:30
+    case controllers_MemberController_getMembersList11_route(params) =>
       call { 
-        controllers_MemberController_getMembersList10_invoker.call(MemberController_5.getMembersList())
+        controllers_MemberController_getMembersList11_invoker.call(MemberController_5.getMembersList())
+      }
+  
+    // @LINE:31
+    case controllers_MemberController_getMemberByID12_route(params) =>
+      call(params.fromPath[Integer]("id", None)) { (id) =>
+        controllers_MemberController_getMemberByID12_invoker.call(MemberController_5.getMemberByID(id))
       }
   
     // @LINE:32
-    case controllers_MemberController_createMember11_route(params) =>
+    case controllers_MemberController_createMember13_route(params) =>
       call { 
-        controllers_MemberController_createMember11_invoker.call(MemberController_5.createMember())
+        controllers_MemberController_createMember13_invoker.call(MemberController_5.createMember())
       }
   
     // @LINE:33
-    case controllers_MemberController_updateMember12_route(params) =>
+    case controllers_MemberController_updateMember14_route(params) =>
       call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_MemberController_updateMember12_invoker.call(MemberController_5.updateMember(id))
+        controllers_MemberController_updateMember14_invoker.call(MemberController_5.updateMember(id))
+      }
+  
+    // @LINE:34
+    case controllers_MemberController_deleteMember15_route(params) =>
+      call(params.fromPath[Integer]("id", None)) { (id) =>
+        controllers_MemberController_deleteMember15_invoker.call(MemberController_5.deleteMember(id))
       }
   
     // @LINE:39
-    case controllers_ImageController_uploadImage13_route(params) =>
+    case controllers_ImageController_uploadImage16_route(params) =>
       call { 
-        controllers_ImageController_uploadImage13_invoker.call(ImageController_0.uploadImage())
+        controllers_ImageController_uploadImage16_invoker.call(ImageController_0.uploadImage())
       }
   
     // @LINE:40
-    case controllers_ImageController_downloadImage14_route(params) =>
+    case controllers_ImageController_downloadImage17_route(params) =>
       call(params.fromPath[String]("id", None)) { (id) =>
-        controllers_ImageController_downloadImage14_invoker.call(ImageController_0.downloadImage(id))
+        controllers_ImageController_downloadImage17_invoker.call(ImageController_0.downloadImage(id))
       }
   
     // @LINE:41
-    case controllers_ImageController_deleteImage15_route(params) =>
+    case controllers_ImageController_deleteImage18_route(params) =>
       call(params.fromPath[String]("id", None)) { (id) =>
-        controllers_ImageController_deleteImage15_invoker.call(ImageController_0.deleteImage(id))
+        controllers_ImageController_deleteImage18_invoker.call(ImageController_0.deleteImage(id))
       }
   
     // @LINE:45
-    case controllers_CollectionController_getCollectionsList16_route(params) =>
+    case controllers_CollectionController_getCollectionsList19_route(params) =>
       call { 
-        controllers_CollectionController_getCollectionsList16_invoker.call(CollectionController_3.getCollectionsList())
+        controllers_CollectionController_getCollectionsList19_invoker.call(CollectionController_3.getCollectionsList())
       }
   
     // @LINE:46
-    case controllers_CollectionController_getCollectionByID17_route(params) =>
+    case controllers_CollectionController_getCollectionByID20_route(params) =>
       call(params.fromPath[String]("ctype", None)) { (ctype) =>
-        controllers_CollectionController_getCollectionByID17_invoker.call(CollectionController_3.getCollectionByID(ctype))
+        controllers_CollectionController_getCollectionByID20_invoker.call(CollectionController_3.getCollectionByID(ctype))
       }
   
     // @LINE:47
-    case controllers_CollectionController_createCollection18_route(params) =>
+    case controllers_CollectionController_createCollection21_route(params) =>
       call { 
-        controllers_CollectionController_createCollection18_invoker.call(CollectionController_3.createCollection())
+        controllers_CollectionController_createCollection21_invoker.call(CollectionController_3.createCollection())
       }
   
     // @LINE:48
-    case controllers_CollectionController_updateCollection19_route(params) =>
+    case controllers_CollectionController_updateCollection22_route(params) =>
       call(params.fromPath[String]("ctype", None)) { (ctype) =>
-        controllers_CollectionController_updateCollection19_invoker.call(CollectionController_3.updateCollection(ctype))
+        controllers_CollectionController_updateCollection22_invoker.call(CollectionController_3.updateCollection(ctype))
       }
   
     // @LINE:49
-    case controllers_CollectionController_deleteCollection20_route(params) =>
+    case controllers_CollectionController_deleteCollection23_route(params) =>
       call(params.fromPath[String]("ctype", None)) { (ctype) =>
-        controllers_CollectionController_deleteCollection20_invoker.call(CollectionController_3.deleteCollection(ctype))
+        controllers_CollectionController_deleteCollection23_invoker.call(CollectionController_3.deleteCollection(ctype))
       }
   
     // @LINE:53
-    case controllers_ImagesController_getImagesList21_route(params) =>
+    case controllers_ImagesController_getImagesList24_route(params) =>
       call { 
-        controllers_ImagesController_getImagesList21_invoker.call(ImagesController_6.getImagesList())
+        controllers_ImagesController_getImagesList24_invoker.call(ImagesController_6.getImagesList())
       }
   
     // @LINE:58
-    case controllers_UserController_signIn22_route(params) =>
+    case controllers_UserController_signIn25_route(params) =>
       call { 
-        controllers_UserController_signIn22_invoker.call(UserController_2.signIn())
+        controllers_UserController_signIn25_invoker.call(UserController_2.signIn())
       }
   
     // @LINE:59
-    case controllers_UserController_signOut23_route(params) =>
+    case controllers_UserController_signOut26_route(params) =>
       call { 
-        controllers_UserController_signOut23_invoker.call(UserController_2.signOut())
+        controllers_UserController_signOut26_invoker.call(UserController_2.signOut())
       }
   
     // @LINE:60
-    case controllers_UserController_getCurrentUser24_route(params) =>
+    case controllers_UserController_getCurrentUser27_route(params) =>
       call { 
-        controllers_UserController_getCurrentUser24_invoker.call(UserController_2.getCurrentUser())
+        controllers_UserController_getCurrentUser27_invoker.call(UserController_2.getCurrentUser())
       }
   
     // @LINE:61
-    case controllers_UserController_userDob25_route(params) =>
+    case controllers_UserController_userDob28_route(params) =>
       call { 
-        controllers_UserController_userDob25_invoker.call(UserController_2.userDob())
+        controllers_UserController_userDob28_invoker.call(UserController_2.userDob())
       }
   }
 }

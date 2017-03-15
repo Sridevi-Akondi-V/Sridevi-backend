@@ -8,7 +8,7 @@ import play.data.validation.*;
 import java.util.List;
 import java.io.File;
 
-/* Edited by Sridevi Akondi */
+/* Created by Sridevi Akondi*/
 
 
 @Entity

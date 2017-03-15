@@ -24,14 +24,14 @@ DELETE   /rest/:id                                                              
 GET     /search_restaurants_by_name_area                                            controllers.RestaurantController.getRestaurantsFromSearchFilter(area: java.lang.String ?=null , restaurantname: java.lang.String ?=null)
 GET     /search_nearby_restaurants/:latitude                                        controllers.RestaurantController.getNearbyRestaurants(latitude: java.lang.Double,longitude: java.lang.Double)
 GET     /filter                                                                     controllers.RestaurantController.getRestaurantsBySearchFilter(keyword: java.lang.String ?= null , collection: java.lang.String?= null, time: java.lang.String?= null , cost1: Integer?= null, cost2: Integer?= null, delivery: Integer?= null)
+GET     /search/:keyword                                                                     controllers.RestaurantController.getNearbyRestaurantsBySearch(keyword: java.lang.String)
 
 #The members can be retrieved, created, updated and deleted
 GET      /members_list                                                             controllers.MemberController.getMembersList()
-#GET      /members/:id                                                             controllers.MemberController.getMemberByID(id: Integer)
-#GET      /authenticate_member_by_username_password/:username                       controllers.MemberController.getMemberByUsernamePassword(username: java.lang.String , password: java.lang.String ?=null)
+GET      /members/:id                                                             controllers.MemberController.getMemberByID(id: Integer)
 POST     /create_member                                                             controllers.MemberController.createMember()
 PUT      /update_members/:id                                                        controllers.MemberController.updateMember(id:Integer)
-#DELETE   /delete_member/:id                                                        controllers.MemberController.deleteMember(id:Integer)
+DELETE   /delete_member/:id                                                        controllers.MemberController.deleteMember(id:Integer)
 
 
 

@@ -21,9 +21,7 @@ import static play.mvc.Results.badRequest;
 import static play.mvc.Results.notFound;
 import static play.mvc.Results.ok;
 
-/* Edited by Sridevi Akondi */
-/* Import Restaurant model */
-
+/* Created by Sridevi Akondi*/
 
 public class CollectionController {
 

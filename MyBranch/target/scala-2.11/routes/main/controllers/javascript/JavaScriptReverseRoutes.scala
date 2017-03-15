@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Wed Mar 15 16:05:40 IST 2017
+// @DATE:Wed Mar 15 22:54:51 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -59,6 +59,16 @@ package controllers.javascript {
       """
         function(id0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "restaurants_by_id/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id0)})
+        }
+      """
+    )
+  
+    // @LINE:27
+    def getNearbyRestaurantsBySearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RestaurantController.getNearbyRestaurantsBySearch",
+      """
+        function(keyword0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search/" + (""" + implicitly[PathBindable[java.lang.String]].javascriptUnbind + """)("keyword", keyword0)})
         }
       """
     )
@@ -195,7 +205,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:29
+  // @LINE:30
   class ReverseMemberController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -203,12 +213,12 @@ package controllers.javascript {
     }
 
   
-    // @LINE:32
-    def createMember: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.MemberController.createMember",
+    // @LINE:30
+    def getMembersList: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.MemberController.getMembersList",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "create_member"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "members_list"})
         }
       """
     )
@@ -223,12 +233,32 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:29
-    def getMembersList: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.MemberController.getMembersList",
+    // @LINE:32
+    def createMember: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.MemberController.createMember",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "members_list"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "create_member"})
+        }
+      """
+    )
+  
+    // @LINE:34
+    def deleteMember: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.MemberController.deleteMember",
+      """
+        function(id0) {
+          return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "delete_member/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id0)})
+        }
+      """
+    )
+  
+    // @LINE:31
+    def getMemberByID: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.MemberController.getMemberByID",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "members/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id0)})
         }
       """
     )

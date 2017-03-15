@@ -13,7 +13,7 @@ import java.io.File;
 import java.sql.Time;
 import java.math.BigDecimal;
 
-/* Edited by Sridevi Akondi */
+/* Created by Sridevi Akondi*/
 
 @Entity
 @Table(name = "tb_restaurants")

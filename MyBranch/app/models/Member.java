@@ -11,7 +11,7 @@ import java.util.List;
 import java.io.File;
 import java.sql.Time;
 
-/* Edited by Sridevi Akondi */
+/* Created by Sridevi Akondi*/
 
 @Entity
 @Table(name = "tb_member")

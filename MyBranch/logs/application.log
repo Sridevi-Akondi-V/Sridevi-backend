@@ -1,28 +1,14 @@
-2017-03-15 16:19:54,644 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2017-03-15 16:19:55,127 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
-2017-03-15 16:19:55,164 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-15 16:19:58,442 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2017-03-15 16:21:39,542 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
-2017-03-15 16:21:39,795 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2017-03-15 16:21:39,795 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-4 - datasource [default] bound to JNDI as DefaultDS
-2017-03-15 16:21:39,829 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-15 16:21:40,584 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
-2017-03-15 16:21:40,626 [INFO] from application in application-akka.actor.default-dispatcher-7 - Running AuthenticatorAction
-2017-03-15 16:21:40,688 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - Authorized header: Bearer e0deac22-cda0-41d5-ace8-51a6cbdf88fc
-2017-03-15 16:21:40,688 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - auth_token: e0deac22-cda0-41d5-ace8-51a6cbdf88fc
-2017-03-15 16:21:40,688 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - e0deac22-cda0-41d5-ace8-51a6cbdf88fc
-2017-03-15 16:21:40,688 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - SELECT m FROM Member m where m.authToken='e0deac22-cda0-41d5-ace8-51a6cbdf88fc'
-2017-03-15 16:21:41,000 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - org.hibernate.jpa.internal.QueryImpl@71b57c92
-2017-03-15 16:21:41,006 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - [models.Member@4e802b8e]
-2017-03-15 16:21:41,006 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - member: models.Member@4e802b8e
-2017-03-15 16:22:24,295 [INFO] from application in application-akka.actor.default-dispatcher-9 - Running AuthenticatorAction
-2017-03-15 16:22:24,295 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - Authorized header: Bearer 4980bef9-a163-4eb7-801f-aa532f6cffc5
-2017-03-15 16:22:24,295 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - auth_token: 4980bef9-a163-4eb7-801f-aa532f6cffc5
-2017-03-15 16:22:24,299 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - 4980bef9-a163-4eb7-801f-aa532f6cffc5
-2017-03-15 16:22:24,299 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - SELECT m FROM Member m where m.authToken='4980bef9-a163-4eb7-801f-aa532f6cffc5'
-2017-03-15 16:22:24,303 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - org.hibernate.jpa.internal.QueryImpl@4f3bd0e6
-2017-03-15 16:22:24,303 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - [models.Member@2f142fa9]
-2017-03-15 16:22:24,307 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - member: models.Member@2f142fa9
-2017-03-15 16:22:24,615 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - 30
-2017-03-15 16:22:24,615 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - 17
-2017-03-15 16:22:36,634 [INFO] from application in pool-4-thread-2 - Shutting down connection pool.
+2017-03-15 22:55:48,041 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2017-03-15 22:55:49,105 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
+2017-03-15 22:55:49,180 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-15 22:55:55,493 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2017-03-15 22:58:07,238 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
+2017-03-15 22:58:07,637 [INFO] from application in application-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
+2017-03-15 22:58:07,658 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-6 - datasource [default] bound to JNDI as DefaultDS
+2017-03-15 22:58:07,682 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-15 22:58:08,557 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
+2017-03-15 22:58:08,646 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - 22:58:59
+2017-03-15 22:58:08,646 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - +
+2017-03-15 22:58:15,207 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - 22:58:59
+2017-03-15 22:58:15,207 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - +
+2017-03-15 23:09:00,817 [INFO] from application in pool-4-thread-3 - Shutting down connection pool.

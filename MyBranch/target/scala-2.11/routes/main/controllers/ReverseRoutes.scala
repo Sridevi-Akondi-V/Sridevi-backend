@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Wed Mar 15 16:05:40 IST 2017
+// @DATE:Wed Mar 15 22:54:51 IST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -42,6 +42,12 @@ package controllers {
     def getRestaurantByID(id:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "restaurants_by_id/" + implicitly[PathBindable[Integer]].unbind("id", id))
+    }
+  
+    // @LINE:27
+    def getNearbyRestaurantsBySearch(keyword:java.lang.String): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "search/" + implicitly[PathBindable[java.lang.String]].unbind("keyword", keyword))
     }
   
     // @LINE:24
@@ -130,17 +136,17 @@ package controllers {
   
   }
 
-  // @LINE:29
+  // @LINE:30
   class ReverseMemberController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:32
-    def createMember(): Call = {
+    // @LINE:30
+    def getMembersList(): Call = {
       import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "create_member")
+      Call("GET", _prefix + { _defaultPrefix } + "members_list")
     }
   
     // @LINE:33
@@ -149,10 +155,22 @@ package controllers {
       Call("PUT", _prefix + { _defaultPrefix } + "update_members/" + implicitly[PathBindable[Integer]].unbind("id", id))
     }
   
-    // @LINE:29
-    def getMembersList(): Call = {
+    // @LINE:32
+    def createMember(): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "members_list")
+      Call("POST", _prefix + { _defaultPrefix } + "create_member")
+    }
+  
+    // @LINE:34
+    def deleteMember(id:Integer): Call = {
+      import ReverseRouteContext.empty
+      Call("DELETE", _prefix + { _defaultPrefix } + "delete_member/" + implicitly[PathBindable[Integer]].unbind("id", id))
+    }
+  
+    // @LINE:31
+    def getMemberByID(id:Integer): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "members/" + implicitly[PathBindable[Integer]].unbind("id", id))
     }
   
   }

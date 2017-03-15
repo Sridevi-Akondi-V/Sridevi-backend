@@ -13746,7 +13746,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.11!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 16534ms :: artifacts dl 994ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 10283ms :: artifacts dl 482ms[0m
 [0m[[0mdebug[0m] [0m	report for default#mybranch-build;0.1-SNAPSHOT compile produced in C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\project\target\resolution-cache\reports\default-mybranch-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#mybranch-build;0.1-SNAPSHOT runtime produced in C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\project\target\resolution-cache\reports\default-mybranch-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#mybranch-build;0.1-SNAPSHOT test produced in C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\project\target\resolution-cache\reports\default-mybranch-build-test.xml[0m
@@ -13760,5 +13760,5 @@
 [0m[[0mdebug[0m] [0m	report for default#mybranch-build;0.1-SNAPSHOT docs produced in C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\project\target\resolution-cache\reports\default-mybranch-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#mybranch-build;0.1-SNAPSHOT pom produced in C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\project\target\resolution-cache\reports\default-mybranch-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#mybranch-build;0.1-SNAPSHOT scala-tool produced in C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\project\target\resolution-cache\reports\default-mybranch-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (16534ms resolve - 994ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (10283ms resolve - 482ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

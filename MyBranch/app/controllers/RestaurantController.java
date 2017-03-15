@@ -33,7 +33,7 @@ import javax.persistence.Query;
 
 /* Import Restaurant model */
 
-/* Edited by Sridevi Akondi */
+/* Created by Sridevi Akondi*/
 
 
 public class RestaurantController {
@@ -171,7 +171,7 @@ public class RestaurantController {
     /*Search on Restaurants based on lat, long and distance values */
     @Transactional
     public Result getNearbyRestaurants(Double latitude, Double longitude) {
-        Query query=jpaApi.em().createNativeQuery("SELECT *,SQRT(POW(69.1 * (latitude - ?1),2) + POW (69.1 * (?2- longitude) * COS(latitude / 57.3), 2)) AS distance FROM tb_restaurants HAVING distance < 10 ORDER BY distance");
+        Query query=jpaApi.em().createNativeQuery("SELECT *,SQRT(POW(69.1 * (latitude - ?1),2) + POW (69.1 * (?2- longitude) * COS(latitude / 57.3), 2)) AS distance FROM tb_restaurants HAVING distance < 10 ORDER BY distance limit 10");
         query.setParameter(1,latitude);
         query.setParameter(2,longitude);
         List<Restaurant> rest = query.getResultList();
@@ -181,8 +181,8 @@ public class RestaurantController {
 
     @Transactional
     public Result getNearbyRestaurantsBySearch(String keyword) {
-        Query query=jpaApi.em().createNativeQuery("SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN NATURAL LANGUAGE MODE)");
-        query.setParameter(1,keyword);
+        Query query=jpaApi.em().createNativeQuery("SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN BOOLEAN MODE)");
+        query.setParameter(1,keyword.concat("*"));
         List<Restaurant> rest = query.getResultList();
         JsonNode json = Json.toJson(rest);
         return ok(json);
@@ -201,10 +201,10 @@ public class RestaurantController {
             Logger.debug("",time1.toString());
         }
         Logger.debug(time1.toString());
-        String q = "SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN NATURAL LANGUAGE MODE)";
+        String q = "SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN BOOLEAN MODE)";
         if(null != keyword && null == collection && null== time && (null == cost1 && null == cost2) && null == delivery) {
             Query query = jpaApi.em().createNativeQuery(q);
-            query.setParameter(1, keyword);
+            query.setParameter(1,keyword.concat("*"));
             Logger.debug("+",keyword);
             rest = query.getResultList();
             json= Json.toJson(rest);
@@ -217,7 +217,7 @@ public class RestaurantController {
                 q1 = "where (Collection_Type= ?2 or (Opening_Time >= ?3 and ?3 <= Closing_Time or Cost between ?4 and ?5 or Free_Delivery= ?6))";
             }
             query1 = jpaApi.em().createNativeQuery("SELECT * from (" + q + ") AS T " + q1);
-            query1.setParameter(1, keyword);
+            query1.setParameter(1, keyword.concat("*"));
             query1.setParameter(2, collection);
             query1.setParameter(3, time1);
             query1.setParameter(4, cost1);
