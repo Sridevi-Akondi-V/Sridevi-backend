@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Thu Mar 16 02:58:55 IST 2017
+// @DATE:Thu Mar 16 03:35:02 IST 2017
 
 package router
 
@@ -98,7 +98,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/users_dob""", """controllers.UserController.userDob()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/rating""", """controllers.RatingController.postRatingRestaurants()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """avg_rating_restaurant""", """controllers.RestaurantController.AvgRatingofRestaurant(id:Integer ?= null)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """rating_by_currentuser""", """controllers.UserController.RatingsByCurrentUser(uid:Integer ?= null)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """rating_by_currentuser""", """controllers.UserController.RatingsByCurrentUser(uname:java.lang.String ?= null)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -639,12 +639,12 @@ POST /users/signup                                                              
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("rating_by_currentuser")))
   )
   private[this] lazy val controllers_UserController_RatingsByCurrentUser31_invoker = createInvoker(
-    UserController_2.RatingsByCurrentUser(fakeValue[Integer]),
+    UserController_2.RatingsByCurrentUser(fakeValue[java.lang.String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.UserController",
       "RatingsByCurrentUser",
-      Seq(classOf[Integer]),
+      Seq(classOf[java.lang.String]),
       "GET",
       """""",
       this.prefix + """rating_by_currentuser"""
@@ -842,8 +842,8 @@ POST /users/signup                                                              
   
     // @LINE:66
     case controllers_UserController_RatingsByCurrentUser31_route(params) =>
-      call(params.fromQuery[Integer]("uid", Some(null))) { (uid) =>
-        controllers_UserController_RatingsByCurrentUser31_invoker.call(UserController_2.RatingsByCurrentUser(uid))
+      call(params.fromQuery[java.lang.String]("uname", Some(null))) { (uname) =>
+        controllers_UserController_RatingsByCurrentUser31_invoker.call(UserController_2.RatingsByCurrentUser(uname))
       }
   }
 }

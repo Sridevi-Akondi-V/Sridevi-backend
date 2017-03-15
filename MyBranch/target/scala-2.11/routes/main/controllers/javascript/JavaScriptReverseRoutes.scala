@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Thu Mar 16 02:58:55 IST 2017
+// @DATE:Thu Mar 16 03:35:02 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -343,22 +343,22 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:66
+    def RatingsByCurrentUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.UserController.RatingsByCurrentUser",
+      """
+        function(uname0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "rating_by_currentuser" + _qS([(uname0 == null ? null : (""" + implicitly[QueryStringBindable[java.lang.String]].javascriptUnbind + """)("uname", uname0))])})
+        }
+      """
+    )
+  
     // @LINE:61
     def userDob: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UserController.userDob",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/users_dob"})
-        }
-      """
-    )
-  
-    // @LINE:66
-    def RatingsByCurrentUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.UserController.RatingsByCurrentUser",
-      """
-        function(uid0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "rating_by_currentuser" + _qS([(uid0 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("uid", uid0))])})
         }
       """
     )

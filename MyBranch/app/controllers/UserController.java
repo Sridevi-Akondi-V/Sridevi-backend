@@ -128,11 +128,11 @@ public class UserController extends Controller {
 
     @Transactional
     @Authenticator
-    public Result RatingsByCurrentUser(Integer uid) {
+    public Result RatingsByCurrentUser(String uname) {
         List<Rating> ratingList;
-        String q = "SELECT tb_member.*,tb_restaurants.id ,(tb_ratings.Rating) AS rating_average  FROM mavericks_project.tb_ratings inner join tb_restaurants on tb_restaurants.id = tb_ratings.r_fid inner join tb_member on tb_member.uid = tb_ratings.u_fid where tb_member.uid = ?1";
+        String q = "SELECT tb_member.*,tb_restaurants.id,tb_ratings.User_Reviews ,(tb_ratings.Rating) AS rating_average  FROM mavericks_project.tb_ratings inner join tb_restaurants on tb_restaurants.id = tb_ratings.r_fid inner join tb_member on tb_member.Username = tb_ratings.uname_fid where tb_member.Username = ?1";
         Query query = jpaApi.em().createNativeQuery(q);
-        query.setParameter(1,uid);
+        query.setParameter(1,uname);
         ratingList = query.getResultList();
         JsonNode json = Json.toJson(ratingList);
         return ok(json);

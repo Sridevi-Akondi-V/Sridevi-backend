@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Thu Mar 16 02:58:55 IST 2017
+// @DATE:Thu Mar 16 03:35:02 IST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -227,16 +227,16 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "users/signout")
     }
   
+    // @LINE:66
+    def RatingsByCurrentUser(uname:java.lang.String = null): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "rating_by_currentuser" + queryString(List(if(uname == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("uname", uname)))))
+    }
+  
     // @LINE:61
     def userDob(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "users/users_dob")
-    }
-  
-    // @LINE:66
-    def RatingsByCurrentUser(uid:Integer = null): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "rating_by_currentuser" + queryString(List(if(uid == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("uid", uid)))))
     }
   
     // @LINE:58

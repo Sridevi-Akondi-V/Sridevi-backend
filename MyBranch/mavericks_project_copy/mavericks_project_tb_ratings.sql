@@ -25,8 +25,9 @@ DROP TABLE IF EXISTS `tb_ratings`;
 CREATE TABLE `tb_ratings` (
   `id` int(11) NOT NULL,
   `Rating` double(2,1) DEFAULT NULL,
-  `u_fid` int(11) NOT NULL,
+  `uname_fid` varchar(255) NOT NULL,
   `r_fid` int(11) NOT NULL,
+  `User_Reviews` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -37,7 +38,7 @@ CREATE TABLE `tb_ratings` (
 
 LOCK TABLES `tb_ratings` WRITE;
 /*!40000 ALTER TABLE `tb_ratings` DISABLE KEYS */;
-INSERT INTO `tb_ratings` VALUES (1,5.0,42,1),(2,3.5,43,1),(3,4.0,24,1),(4,4.5,43,2),(5,3.0,42,2),(9,4.5,42,3),(10,3.5,43,3),(11,4.0,42,5);
+INSERT INTO `tb_ratings` VALUES (1,4.5,'manisha',1,'nice'),(2,4.0,'shruthi',1,'good'),(15,4.0,'manisha',6,'good');
 /*!40000 ALTER TABLE `tb_ratings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-16  3:20:01
+-- Dump completed on 2017-03-16  3:42:10

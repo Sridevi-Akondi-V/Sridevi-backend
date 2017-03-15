@@ -234,7 +234,7 @@ public class RestaurantController {
     @Transactional
     public Result AvgRatingofRestaurant(Integer id) {
         List<Rating> ratingList;
-        String q = "SELECT tb_restaurants.*,tb_member.uid ,(tb_ratings.Rating) AS rating_average  FROM mavericks_project.tb_ratings inner join tb_restaurants on tb_restaurants.id = tb_ratings.r_fid inner join tb_member on tb_member.uid = tb_ratings.u_fid where tb_restaurants.id = ?1";
+        String q = "SELECT tb_restaurants.*,tb_member.Username,tb_ratings.User_Reviews ,(tb_ratings.Rating) AS rating_average  FROM mavericks_project.tb_ratings inner join tb_restaurants on tb_restaurants.id = tb_ratings.r_fid inner join tb_member on tb_member.Username = tb_ratings.uname_fid where tb_restaurants.id =?1";
         Query query = jpaApi.em().createNativeQuery(q);
         query.setParameter(1,id);
         ratingList = query.getResultList();

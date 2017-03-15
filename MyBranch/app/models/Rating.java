@@ -15,20 +15,23 @@ public class Rating {
     @Column(name = "Rating", precision = 2, scale = 1)
     private Double rating;
 
-    @Column(name= "u_fid")
-    private int user_fkid;
+    @Column(name= "uname_fid")
+    private String username_fkid;
 
     @Column(name= "r_fid")
     private int rest_fkid;
+
+    @Column(name = "User_Reviews")
+    private String user_reviews;
 
     public Rating() {
 
     }
 
-    public Rating(int id, Double rating, int user_fkid, int rest_fkid) {
+    public Rating(int id, Double rating, String username_fkid, int rest_fkid) {
         this.id = id;
         this.rating = rating;
-        this.user_fkid = user_fkid;
+        this.username_fkid = username_fkid;
         this.rest_fkid = rest_fkid ;
     }
 
@@ -49,19 +52,27 @@ public class Rating {
         this.rating = rating;
     }
 
-    public int getUser_fkid() {
-        return user_fkid;
-    }
-
-    public void setUser_fkid(int user_fkid) {
-        this.user_fkid = user_fkid;
-    }
-
     public int getRest_fkid() {
         return rest_fkid;
     }
 
     public void setRest_fkid(int rest_fkid) {
         this.rest_fkid = rest_fkid;
+    }
+
+    public String getUsername_fkid() {
+        return username_fkid;
+    }
+
+    public void setUsername_fkid(String username_fkid) {
+        this.username_fkid = username_fkid;
+    }
+
+    public String getUser_reviews() {
+        return user_reviews;
+    }
+
+    public void setUser_reviews(String user_reviews) {
+        this.user_reviews = user_reviews;
     }
 }
