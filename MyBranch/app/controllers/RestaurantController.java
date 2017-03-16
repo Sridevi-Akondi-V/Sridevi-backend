@@ -63,9 +63,20 @@ public class RestaurantController {
 
     @Transactional
     @Authenticator
-    public Result getRestaurantByID(Integer id) {
-        Restaurant i = jpaApi.em().find(Restaurant.class, id);
-        JsonNode json = Json.toJson(i);
+    public Result getRestaurantByID(Integer id, Integer rating) {
+        JsonNode json;
+        if(null == rating) {
+            Restaurant i = jpaApi.em().find(Restaurant.class, id);
+            json = Json.toJson(i);
+        }
+        else {
+            List<Rating> ratingList;
+            String q = "SELECT tb_restaurants.* , avg(tb_ratings.Rating) as Avg_Rating from tb_restaurants inner join tb_ratings on tb_restaurants.id = tb_ratings.r_fid where tb_ratings.r_fid = ?1 group by tb_restaurants.id";
+            Query query = jpaApi.em().createNativeQuery(q);
+            query.setParameter(1, id);
+            ratingList = query.getResultList();
+            json = Json.toJson(ratingList);
+        }
         return ok(json);
     }
 

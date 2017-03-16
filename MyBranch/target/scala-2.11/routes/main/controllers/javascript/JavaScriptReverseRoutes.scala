@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/sakondi/Desktop/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Thu Mar 16 12:25:16 IST 2017
+// @DATE:Thu Mar 16 13:26:29 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -29,6 +29,16 @@ package controllers.javascript {
       """
         function(id0) {
           return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "rest/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id0)})
+        }
+      """
+    )
+  
+    // @LINE:11
+    def getRestaurantByID: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RestaurantController.getRestaurantByID",
+      """
+        function(id0,rating1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "restaurants_by_id/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id0) + _qS([(rating1 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("rating", rating1))])})
         }
       """
     )
@@ -69,16 +79,6 @@ package controllers.javascript {
       """
         function(id0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ratings_reviews" + _qS([(id0 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("id", id0))])})
-        }
-      """
-    )
-  
-    // @LINE:11
-    def getRestaurantByID: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.RestaurantController.getRestaurantByID",
-      """
-        function(id0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "restaurants_by_id/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id0)})
         }
       """
     )

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/sakondi/Desktop/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Thu Mar 16 12:25:16 IST 2017
+// @DATE:Thu Mar 16 13:26:29 IST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -26,6 +26,12 @@ package controllers {
       Call("DELETE", _prefix + { _defaultPrefix } + "rest/" + implicitly[PathBindable[Integer]].unbind("id", id))
     }
   
+    // @LINE:11
+    def getRestaurantByID(id:Integer, rating:Integer = null): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "restaurants_by_id/" + implicitly[PathBindable[Integer]].unbind("id", id) + queryString(List(if(rating == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("rating", rating)))))
+    }
+  
     // @LINE:26
     def getRestaurantsBySearchFilter(keyword:java.lang.String = null , collection:java.lang.String = null, time:java.lang.String = null , cost1:Integer = null, cost2:Integer = null, delivery:Integer = null): Call = {
       import ReverseRouteContext.empty
@@ -48,12 +54,6 @@ package controllers {
     def Reviews_Ratings_Restaurant(id:Integer = null): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "ratings_reviews" + queryString(List(if(id == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("id", id)))))
-    }
-  
-    // @LINE:11
-    def getRestaurantByID(id:Integer): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "restaurants_by_id/" + implicitly[PathBindable[Integer]].unbind("id", id))
     }
   
     // @LINE:27

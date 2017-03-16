@@ -8,7 +8,7 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 #Restaurants that will be displayed to the users
 GET      /list_of_all_restaurants                                                   controllers.RestaurantController.getRestaurantsList()
-GET      /restaurants_by_id/:id                                                     controllers.RestaurantController.getRestaurantByID(id: Integer)
+GET      /restaurants_by_id/:id                                                     controllers.RestaurantController.getRestaurantByID(id: Integer, rating : Integer?= null)
 
 
 #Restaurants in each collection

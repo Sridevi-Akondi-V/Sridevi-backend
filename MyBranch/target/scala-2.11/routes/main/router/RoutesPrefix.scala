@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/sakondi/Desktop/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Thu Mar 16 12:25:16 IST 2017
+// @DATE:Thu Mar 16 13:26:29 IST 2017
 
 
 package router {

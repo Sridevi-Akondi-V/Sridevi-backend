@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/sakondi/Desktop/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Thu Mar 16 12:25:16 IST 2017
+// @DATE:Thu Mar 16 13:26:29 IST 2017
 
 package router
 
@@ -69,7 +69,7 @@ class Routes(
   def documentation = List(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """list_of_all_restaurants""", """controllers.RestaurantController.getRestaurantsList()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """restaurants_by_id/""" + "$" + """id<[^/]+>""", """controllers.RestaurantController.getRestaurantByID(id:Integer)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """restaurants_by_id/""" + "$" + """id<[^/]+>""", """controllers.RestaurantController.getRestaurantByID(id:Integer, rating:Integer ?= null)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """collections/""" + "$" + """collection<[^/]+>""", """controllers.RestaurantController.getCollectionType(collection:String)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """rest""", """controllers.RestaurantController.createRestAdmin()"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """update_a_restaurant/""" + "$" + """id<[^/]+>""", """controllers.RestaurantController.updateRestAdmin(id:Integer)"""),
@@ -145,12 +145,12 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("restaurants_by_id/"), DynamicPart("id", """[^/]+""",true)))
   )
   private[this] lazy val controllers_RestaurantController_getRestaurantByID2_invoker = createInvoker(
-    RestaurantController_1.getRestaurantByID(fakeValue[Integer]),
+    RestaurantController_1.getRestaurantByID(fakeValue[Integer], fakeValue[Integer]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.RestaurantController",
       "getRestaurantByID",
-      Seq(classOf[Integer]),
+      Seq(classOf[Integer], classOf[Integer]),
       "GET",
       """""",
       this.prefix + """restaurants_by_id/""" + "$" + """id<[^/]+>"""
@@ -668,8 +668,8 @@ POST /users/signup                                                              
   
     // @LINE:11
     case controllers_RestaurantController_getRestaurantByID2_route(params) =>
-      call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_RestaurantController_getRestaurantByID2_invoker.call(RestaurantController_1.getRestaurantByID(id))
+      call(params.fromPath[Integer]("id", None), params.fromQuery[Integer]("rating", Some(null))) { (id, rating) =>
+        controllers_RestaurantController_getRestaurantByID2_invoker.call(RestaurantController_1.getRestaurantByID(id, rating))
       }
   
     // @LINE:15
