@@ -8,8 +8,8 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 #Restaurants that will be displayed to the users
 GET      /list_of_all_restaurants                                                   controllers.RestaurantController.getRestaurantsList()
-GET      /restaurants_by_id/:id                                                     controllers.RestaurantController.getRestaurantByID(id: Integer, rating : Integer?= null)
-
+GET      /restaurants_by_id/:id                                                     controllers.RestaurantController.getRestaurantByID(id: Integer)
+GET      /restaurants/:id                                                           controllers.RestaurantController.getRestaurant(id: Integer, rating : Integer?= null)
 
 #Restaurants in each collection
 GET     /collections/:collection                                                    controllers.RestaurantController.getCollectionType(collection: String)
@@ -25,6 +25,11 @@ GET     /search_restaurants_by_name_area                                        
 GET     /search_nearby_restaurants/:latitude                                        controllers.RestaurantController.getNearbyRestaurants(latitude: java.lang.Double,longitude: java.lang.Double)
 GET     /filter                                                                     controllers.RestaurantController.getRestaurantsBySearchFilter(keyword: java.lang.String ?= null , collection: java.lang.String?= null, time: java.lang.String?= null , cost1: Integer?= null, cost2: Integer?= null, delivery: Integer?= null)
 GET     /search/:keyword                                                            controllers.RestaurantController.getNearbyRestaurantsBySearch(keyword: java.lang.String)
+GET     /filtersearch                                                               controllers.RestaurantController.getRestaurantsSearch(keyword: java.lang.String ?= null , collection: java.lang.String?= null, time: java.lang.String?= null , cost1: Integer?= null, cost2: Integer?= null, delivery: Integer?= null)
+
+
+
+
 
 #The members can be retrieved, created, updated and deleted
 GET      /members_list                                                             controllers.MemberController.getMembersList()

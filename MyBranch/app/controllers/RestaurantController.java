@@ -22,8 +22,8 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
+
 import exceptions.NotFoundException;
 import static play.mvc.Controller.request;
 import static play.mvc.Http.Status.NOT_IMPLEMENTED;
@@ -61,23 +61,35 @@ public class RestaurantController {
         return ok(json);
     }
 
+
     @Transactional
     @Authenticator
-    public Result getRestaurantByID(Integer id, Integer rating) {
+    public Result getRestaurantByID(Integer id) {
         JsonNode json;
-        if(null == rating) {
             Restaurant i = jpaApi.em().find(Restaurant.class, id);
             json = Json.toJson(i);
+            return ok(json);
         }
-        else {
+
+    @Transactional
+    @Authenticator
+    public Result getRestaurant(Integer id, Integer rating) {
+        JsonNode json;
+        if (rating ==0) {
+            Restaurant i = jpaApi.em().find(Restaurant.class, id);
+            json = Json.toJson(i);
+            return ok(json);
+        }
+        if (rating == 1){
             List<Rating> ratingList;
             String q = "SELECT tb_restaurants.* , avg(tb_ratings.Rating) as Avg_Rating from tb_restaurants inner join tb_ratings on tb_restaurants.id = tb_ratings.r_fid where tb_ratings.r_fid = ?1 group by tb_restaurants.id";
             Query query = jpaApi.em().createNativeQuery(q);
             query.setParameter(1, id);
             ratingList = query.getResultList();
             json = Json.toJson(ratingList);
+            return ok(json);
         }
-        return ok(json);
+        return ok();
     }
 
 
@@ -229,6 +241,81 @@ public class RestaurantController {
                 q1 = "where (Collection_Type= ?2 or (Opening_Time >= ?3 and ?3 <= Closing_Time or Cost between ?4 and ?5 or Free_Delivery= ?6))";
             }
             query1 = jpaApi.em().createNativeQuery("SELECT * from (" + q + ") AS T " + q1);
+            query1.setParameter(1, keyword.concat("*"));
+            query1.setParameter(2, collection);
+            query1.setParameter(3, time1);
+            query1.setParameter(4, cost1);
+            query1.setParameter(5, cost2);
+            query1.setParameter(6, delivery);
+            Logger.debug("-", query1.toString());
+            rest = query1.getResultList();
+            json = Json.toJson(rest);
+            return ok(json);
+        }
+    }
+
+
+
+    @Transactional
+    public Result getRestaurantsSearch(String keyword, String collection, String time ,Integer cost1, Integer cost2, Integer delivery) {
+        List<Restaurant> rest;
+        String q1="";
+        Query query1;
+        JsonNode json;
+        Time time1 = new Time(-1,-1,-1);
+        if (time != null) {
+            time1 = java.sql.Time.valueOf(time);
+            Logger.debug("",time1.toString());
+        }
+        Logger.debug(time1.toString());
+        String q = "SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN BOOLEAN MODE)";
+        if(null != keyword && null == collection && null== time && (null == cost1 && null == cost2) && null == delivery) {
+            Query query = jpaApi.em().createNativeQuery(q);
+            query.setParameter(1,keyword.concat("*"));
+            Logger.debug("+",keyword);
+            rest = query.getResultList();
+            json= Json.toJson(rest);
+            return ok(json);
+        }
+
+        else {
+
+            Map<String,String> filter = new HashMap<>();
+            Map<String,String> filter1 = new HashMap<>();
+            Map<String,String> filter2 = new HashMap<>();
+                if(null != collection) {
+                    filter.put("  Collection_Type = ", "?2");
+                }
+
+                if (null!= delivery) {
+                    filter.put(" and Free_Delivery = ","?6");
+                }
+
+                if( time1 != null ) {
+
+                    filter1.put(" and Opening_Time <= ", "?3");
+                    filter1.put(" and Closing_Time  >= ", "?3");
+                    filter.putAll(filter1);
+                }
+
+                if( null != cost1 && null != cost2) {
+                    filter2.put(" and Cost between ","?4");
+                    filter2.put(" and ","?5");
+                    filter.putAll(filter2);
+                }
+
+
+            Logger.debug(filter.get(" and Collection_Type = "));
+            for(Map.Entry<String, String> entry : filter.entrySet()) {
+                String key = entry.getKey();
+                String value = entry.getValue();
+                Logger.debug(value);
+                if(!value.equals(null)) {
+                    q1+=key.concat(value);
+                    Logger.debug("---------" +q1+" ------");
+                }
+            }
+            query1 = jpaApi.em().createNativeQuery("SELECT * from (" + q + ") AS T where (" + q1 + ")");
             query1.setParameter(1, keyword.concat("*"));
             query1.setParameter(2, collection);
             query1.setParameter(3, time1);
