@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Thu Mar 16 03:35:02 IST 2017
+// @SOURCE:/Users/sakondi/Desktop/Sridevi-backend/MyBranch/conf/routes
+// @DATE:Thu Mar 16 12:25:16 IST 2017
 
 package router
 
@@ -98,7 +98,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/users_dob""", """controllers.UserController.userDob()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """users/rating""", """controllers.RatingController.postRatingRestaurants()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """avg_rating_restaurant""", """controllers.RestaurantController.AvgRatingofRestaurant(id:Integer ?= null)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """rating_by_currentuser""", """controllers.UserController.RatingsByCurrentUser(uname:java.lang.String ?= null)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """ratings_reviews""", """controllers.RestaurantController.Reviews_Ratings_Restaurant(id:Integer ?= null)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -634,20 +634,20 @@ POST /users/signup                                                              
     )
   )
 
-  // @LINE:66
-  private[this] lazy val controllers_UserController_RatingsByCurrentUser31_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("rating_by_currentuser")))
+  // @LINE:67
+  private[this] lazy val controllers_RestaurantController_Reviews_Ratings_Restaurant31_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("ratings_reviews")))
   )
-  private[this] lazy val controllers_UserController_RatingsByCurrentUser31_invoker = createInvoker(
-    UserController_2.RatingsByCurrentUser(fakeValue[java.lang.String]),
+  private[this] lazy val controllers_RestaurantController_Reviews_Ratings_Restaurant31_invoker = createInvoker(
+    RestaurantController_1.Reviews_Ratings_Restaurant(fakeValue[Integer]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.UserController",
-      "RatingsByCurrentUser",
-      Seq(classOf[java.lang.String]),
+      "controllers.RestaurantController",
+      "Reviews_Ratings_Restaurant",
+      Seq(classOf[Integer]),
       "GET",
-      """""",
-      this.prefix + """rating_by_currentuser"""
+      """GET   /rating_by_currentuser                                                        controllers.UserController.RatingsByCurrentUser(uname: java.lang.String ?= null)""",
+      this.prefix + """ratings_reviews"""
     )
   )
 
@@ -840,10 +840,10 @@ POST /users/signup                                                              
         controllers_RestaurantController_AvgRatingofRestaurant30_invoker.call(RestaurantController_1.AvgRatingofRestaurant(id))
       }
   
-    // @LINE:66
-    case controllers_UserController_RatingsByCurrentUser31_route(params) =>
-      call(params.fromQuery[java.lang.String]("uname", Some(null))) { (uname) =>
-        controllers_UserController_RatingsByCurrentUser31_invoker.call(UserController_2.RatingsByCurrentUser(uname))
+    // @LINE:67
+    case controllers_RestaurantController_Reviews_Ratings_Restaurant31_route(params) =>
+      call(params.fromQuery[Integer]("id", Some(null))) { (id) =>
+        controllers_RestaurantController_Reviews_Ratings_Restaurant31_invoker.call(RestaurantController_1.Reviews_Ratings_Restaurant(id))
       }
   }
 }

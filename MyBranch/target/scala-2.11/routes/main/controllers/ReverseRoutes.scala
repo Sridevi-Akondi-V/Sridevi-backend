@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Thu Mar 16 03:35:02 IST 2017
+// @SOURCE:/Users/sakondi/Desktop/Sridevi-backend/MyBranch/conf/routes
+// @DATE:Thu Mar 16 12:25:16 IST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -42,6 +42,12 @@ package controllers {
     def updateRestAdmin(id:Integer): Call = {
       import ReverseRouteContext.empty
       Call("PUT", _prefix + { _defaultPrefix } + "update_a_restaurant/" + implicitly[PathBindable[Integer]].unbind("id", id))
+    }
+  
+    // @LINE:67
+    def Reviews_Ratings_Restaurant(id:Integer = null): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "ratings_reviews" + queryString(List(if(id == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("id", id)))))
     }
   
     // @LINE:11
@@ -221,28 +227,22 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "users/current")
     }
   
+    // @LINE:58
+    def signIn(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "users/signin")
+    }
+  
     // @LINE:59
     def signOut(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "users/signout")
     }
   
-    // @LINE:66
-    def RatingsByCurrentUser(uname:java.lang.String = null): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "rating_by_currentuser" + queryString(List(if(uname == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("uname", uname)))))
-    }
-  
     // @LINE:61
     def userDob(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "users/users_dob")
-    }
-  
-    // @LINE:58
-    def signIn(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "users/signin")
     }
   
   }

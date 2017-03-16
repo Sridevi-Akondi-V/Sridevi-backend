@@ -126,7 +126,7 @@ public class UserController extends Controller {
         return ok(Json.toJson(json));
     }
 
-    @Transactional
+    /* @Transactional
     @Authenticator
     public Result RatingsByCurrentUser(String uname) {
         List<Rating> ratingList;
@@ -136,5 +136,5 @@ public class UserController extends Controller {
         ratingList = query.getResultList();
         JsonNode json = Json.toJson(ratingList);
         return ok(json);
-    }
+    } */
 }

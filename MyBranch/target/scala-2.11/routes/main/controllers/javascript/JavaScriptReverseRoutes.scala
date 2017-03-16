@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Thu Mar 16 03:35:02 IST 2017
+// @SOURCE:/Users/sakondi/Desktop/Sridevi-backend/MyBranch/conf/routes
+// @DATE:Thu Mar 16 12:25:16 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -59,6 +59,16 @@ package controllers.javascript {
       """
         function(id0) {
           return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "update_a_restaurant/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id0)})
+        }
+      """
+    )
+  
+    // @LINE:67
+    def Reviews_Ratings_Restaurant: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RestaurantController.Reviews_Ratings_Restaurant",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ratings_reviews" + _qS([(id0 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("id", id0))])})
         }
       """
     )
@@ -333,6 +343,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:58
+    def signIn: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.UserController.signIn",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/signin"})
+        }
+      """
+    )
+  
     // @LINE:59
     def signOut: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UserController.signOut",
@@ -343,32 +363,12 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:66
-    def RatingsByCurrentUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.UserController.RatingsByCurrentUser",
-      """
-        function(uname0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "rating_by_currentuser" + _qS([(uname0 == null ? null : (""" + implicitly[QueryStringBindable[java.lang.String]].javascriptUnbind + """)("uname", uname0))])})
-        }
-      """
-    )
-  
     // @LINE:61
     def userDob: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UserController.userDob",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/users_dob"})
-        }
-      """
-    )
-  
-    // @LINE:58
-    def signIn: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.UserController.signIn",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/signin"})
         }
       """
     )

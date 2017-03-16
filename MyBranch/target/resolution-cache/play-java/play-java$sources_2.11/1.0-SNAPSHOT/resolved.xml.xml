@@ -4,7 +4,7 @@
 		module="play-java$sources_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170315200011"
+		publication="20170316092127"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -231,7 +231,7 @@
 		<dependency org="org.seleniumhq.selenium" name="selenium-leg-rc" rev="2.48.2" transitive="false" conf="test->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">
 			<artifact name="selenium-leg-rc" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
-		<dependency org="org.scala-lang" name="scala-library" rev="2.11.7" transitive="false" conf="compile->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master,master(*);runtime->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master,master(*);test->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master,master(*);compile-internal->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master,master(*);runtime-internal->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master,master(*);test-internal->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master,master(*);docs->compile,runtime(*),master(compile),runtime,compile(*),master,master(*);scala-tool->default,compile,runtime(*),master(compile),runtime,optional,optional(default),compile(*),master,master(*)" info.apiURL="http://www.scala-lang.org/api/2.11.7/">
+		<dependency org="org.scala-lang" name="scala-library" rev="2.11.7" transitive="false" conf="compile->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master;runtime->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master;test->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master;compile-internal->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master;runtime-internal->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master;test-internal->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master;docs->compile,runtime(*),master(compile),runtime,compile(*),master;scala-tool->default,compile,runtime(*),master(compile),runtime,optional,optional(default),compile(*),master" info.apiURL="http://www.scala-lang.org/api/2.11.7/">
 			<artifact name="scala-library" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="com.google.guava" name="guava" rev="19.0" transitive="false" conf="compile->compile,runtime(*),master(compile),runtime,compile(*),master;runtime->compile,runtime(*),master(compile),runtime,compile(*),master;test->compile,runtime(*),master(compile),runtime,compile(*),master;compile-internal->compile,runtime(*),master(compile),runtime,compile(*),master;runtime-internal->compile,runtime(*),master(compile),runtime,compile(*),master;test-internal->compile,runtime(*),master(compile),runtime,compile(*),master">

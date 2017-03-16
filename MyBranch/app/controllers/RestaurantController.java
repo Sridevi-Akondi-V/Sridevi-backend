@@ -234,7 +234,20 @@ public class RestaurantController {
     @Transactional
     public Result AvgRatingofRestaurant(Integer id) {
         List<Rating> ratingList;
-        String q = "SELECT tb_restaurants.*,tb_member.Username,tb_ratings.User_Reviews ,(tb_ratings.Rating) AS rating_average  FROM mavericks_project.tb_ratings inner join tb_restaurants on tb_restaurants.id = tb_ratings.r_fid inner join tb_member on tb_member.Username = tb_ratings.uname_fid where tb_restaurants.id =?1";
+        Double avg;
+        String q = "SELECT tb_restaurants.* , avg(tb_ratings.Rating) as Avg_Rating from tb_restaurants inner join tb_ratings on tb_restaurants.id = tb_ratings.r_fid where tb_ratings.r_fid = ?1 group by tb_restaurants.id";
+        Query query = jpaApi.em().createNativeQuery(q);
+        query.setParameter(1,id);
+        ratingList = query.getResultList();
+        JsonNode json = Json.toJson(ratingList);
+        return ok(json);
+    }
+
+    @Transactional
+    @Authenticator
+    public  Result Reviews_Ratings_Restaurant(Integer id) {
+        List<Rating> ratingList;
+        String q = "SELECT tb_ratings.rid, tb_restaurants.id, tb_member.Username, tb_ratings.Rating, tb_ratings.User_Reviews FROM mavericks_project.tb_ratings inner join tb_restaurants on tb_restaurants.id = tb_ratings.r_fid inner join tb_member on tb_member.Username = tb_ratings.uname_fid where tb_restaurants.id = ?1";
         Query query = jpaApi.em().createNativeQuery(q);
         query.setParameter(1,id);
         ratingList = query.getResultList();

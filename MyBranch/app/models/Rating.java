@@ -9,8 +9,8 @@ import javax.persistence.*;
 public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private int id;
+    @Column(name = "rid")
+    private int r_id;
 
     @Column(name = "Rating", precision = 2, scale = 1)
     private Double rating;
@@ -28,8 +28,8 @@ public class Rating {
 
     }
 
-    public Rating(int id, Double rating, String username_fkid, int rest_fkid) {
-        this.id = id;
+    public Rating(int r_id, Double rating, String username_fkid, int rest_fkid) {
+        this.r_id = r_id;
         this.rating = rating;
         this.username_fkid = username_fkid;
         this.rest_fkid = rest_fkid ;
@@ -37,11 +37,11 @@ public class Rating {
 
 
     public int getId() {
-        return id;
+        return r_id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.r_id = r_id;
     }
 
     public Double getRating() {
