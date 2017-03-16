@@ -259,7 +259,7 @@ public class RestaurantController {
     @Transactional
     public Result getRestaurantsSearch(String keyword, String collection, String time ,Integer cost1, Integer cost2, Integer delivery) {
         List<Restaurant> rest;
-        String q1="";
+        String q1="",q2="";
         Query query1;
         JsonNode json;
         Time time1 = new Time(-1,-1,-1);
@@ -282,13 +282,15 @@ public class RestaurantController {
 
             Map<String,String> filter = new HashMap<>();
             Map<String,String> filter1 = new HashMap<>();
-            Map<String,String> filter2 = new HashMap<>();
-                if(null != collection) {
+            Map<String,Integer> filter2 = new HashMap<>();
+            Map<String,Integer> filter3 = new HashMap<>();
+
+            if(null != collection) {
                     filter.put("  Collection_Type = ", "?2");
                 }
 
                 if (null!= delivery) {
-                    filter.put(" and Free_Delivery = ","?6");
+                    filter3.put(" and Free_Delivery = ",Integer.valueOf("?6"));
                 }
 
                 if( time1 != null ) {
@@ -299,9 +301,9 @@ public class RestaurantController {
                 }
 
                 if( null != cost1 && null != cost2) {
-                    filter2.put(" and Cost between ","?4");
-                    filter2.put(" and ","?5");
-                    filter.putAll(filter2);
+                    filter2.put(" and Cost between ",Integer.valueOf("?4"));
+                    filter2.put(" and ",Integer.valueOf("?5"));
+                    filter3.putAll(filter2);
                 }
 
 
@@ -315,7 +317,16 @@ public class RestaurantController {
                     Logger.debug("---------" +q1+" ------");
                 }
             }
-            query1 = jpaApi.em().createNativeQuery("SELECT * from (" + q + ") AS T where (" + q1 + ")");
+            for(Map.Entry<String, Integer> entry : filter3.entrySet()) {
+                String key = entry.getKey();
+                Integer value = entry.getValue();
+                Logger.debug(String.valueOf(value));
+                if(!value.equals(null)) {
+                    q2+=key.concat(String.valueOf(value));
+                    Logger.debug("---------" +q1+" ------");
+                }
+            }
+            query1 = jpaApi.em().createNativeQuery("SELECT * from (" + q + ") AS T where (" + q1 +  q2+")");
             query1.setParameter(1, keyword.concat("*"));
             query1.setParameter(2, collection);
             query1.setParameter(3, time1);
