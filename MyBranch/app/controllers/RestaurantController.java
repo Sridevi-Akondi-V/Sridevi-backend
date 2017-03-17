@@ -2,31 +2,23 @@ package controllers;
 
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.google.common.collect.Lists;
+import com.google.common.base.Joiner;
 import com.google.inject.Inject;
 import controllers.security.Authenticator;
 import controllers.security.IsAdmin;
 import models.Rating;
 import models.Restaurant;
-import models.Collection;
 import play.Logger;
 import play.db.jpa.JPAApi;
 import play.db.jpa.Transactional;
 import play.libs.Json;
 import play.mvc.Result;
 
-import javax.persistence.Column;
 import javax.persistence.TypedQuery;
 import java.sql.Time;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalTime;
 import java.util.*;
 
-import exceptions.NotFoundException;
 import static play.mvc.Controller.request;
-import static play.mvc.Http.Status.NOT_IMPLEMENTED;
 import static play.mvc.Results.badRequest;
 import static play.mvc.Results.notFound;
 import static play.mvc.Results.ok;
@@ -258,15 +250,25 @@ public class RestaurantController {
 
     @Transactional
     public Result getRestaurantsSearch(String keyword, String collection, String time ,Integer cost1, Integer cost2, Integer delivery) {
-        List<Restaurant> rest;
-        String q1="",q2="";
+        List rest;
+        String q1="";
         Query query1;
         JsonNode json;
+        /*Integer cost_1 = -1;
+        Integer cost_2 = -1;
+        Integer hdelivery = -1;*/
         Time time1 = new Time(-1,-1,-1);
         if (time != null) {
             time1 = java.sql.Time.valueOf(time);
             Logger.debug("",time1.toString());
         }
+        /*if(cost1 != null && cost2 != null) {
+            cost_1 = Integer.valueOf(cost1);
+            cost_2 = Integer.valueOf(cost2);
+        }
+        if(delivery != null) {
+            hdelivery = Integer.valueOf(delivery);
+        }*/
         Logger.debug(time1.toString());
         String q = "SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN BOOLEAN MODE)";
         if(null != keyword && null == collection && null== time && (null == cost1 && null == cost2) && null == delivery) {
@@ -282,58 +284,46 @@ public class RestaurantController {
 
             Map<String,String> filter = new HashMap<>();
             Map<String,String> filter1 = new HashMap<>();
-            Map<String,Integer> filter2 = new HashMap<>();
-            Map<String,Integer> filter3 = new HashMap<>();
-
+            Map<String,String> filter2 = new HashMap<>();
             if(null != collection) {
-                    filter.put("  Collection_Type = ", "?2");
+                    filter.put("  Collection_Type = ", collection );
                 }
 
                 if (null!= delivery) {
-                    filter3.put(" and Free_Delivery = ",Integer.valueOf("?6"));
+                    filter.put("  Free_Delivery = ", String.valueOf(delivery));
                 }
 
                 if( time1 != null ) {
 
-                    filter1.put(" and Opening_Time <= ", "?3");
-                    filter1.put(" and Closing_Time  >= ", "?3");
+                    filter1.put("  Opening_Time <= ", String.valueOf(time1));
+                    filter1.put("  Closing_Time  >= ", String.valueOf(time1));
                     filter.putAll(filter1);
                 }
 
                 if( null != cost1 && null != cost2) {
-                    filter2.put(" and Cost between ",Integer.valueOf("?4"));
-                    filter2.put(" and ",Integer.valueOf("?5"));
-                    filter3.putAll(filter2);
+                    filter2.put(" Cost >= ", String.valueOf(cost1));
+                    filter2.put(" Cost <= ", String.valueOf(cost2));
+                    filter.putAll(filter2);
                 }
 
-
-            Logger.debug(filter.get(" and Collection_Type = "));
-            for(Map.Entry<String, String> entry : filter.entrySet()) {
-                String key = entry.getKey();
-                String value = entry.getValue();
-                Logger.debug(value);
-                if(!value.equals(null)) {
-                    q1+=key.concat(value);
+            //Logger.debug(String.valueOf(filter.get("  Collection_Type = ")));
+            Joiner.MapJoiner joiner = Joiner.on(" and ").withKeyValueSeparator("");
+            q1= joiner.join(filter);
+            Logger.debug(q1);
+            /*for(Map.Entry<String, String> entry : filter.entrySet()) {
+                if(entry.getValue() != null) {
+                    q1= entry.getKey().concat(entry.getValue());
                     Logger.debug("---------" +q1+" ------");
                 }
-            }
-            for(Map.Entry<String, Integer> entry : filter3.entrySet()) {
-                String key = entry.getKey();
-                Integer value = entry.getValue();
-                Logger.debug(String.valueOf(value));
-                if(!value.equals(null)) {
-                    q2+=key.concat(String.valueOf(value));
-                    Logger.debug("---------" +q1+" ------");
-                }
-            }
-            query1 = jpaApi.em().createNativeQuery("SELECT * from (" + q + ") AS T where (" + q1 +  q2+")");
+            }*/
+            query1 = jpaApi.em().createNativeQuery("SELECT * from (" + q + ") AS T where (" + q1 +")");
             query1.setParameter(1, keyword.concat("*"));
-            query1.setParameter(2, collection);
+            /*query1.setParameter(2, collection);
             query1.setParameter(3, time1);
             query1.setParameter(4, cost1);
             query1.setParameter(5, cost2);
-            query1.setParameter(6, delivery);
-            Logger.debug("-", query1.toString());
+            query1.setParameter(6, delivery); */
+            Logger.debug(query1.toString());
             rest = query1.getResultList();
             json = Json.toJson(rest);
             return ok(json);

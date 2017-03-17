@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/sakondi/Desktop/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Thu Mar 16 16:31:47 IST 2017
+// @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
+// @DATE:Thu Mar 16 23:12:45 IST 2017
 
 package controllers;
 

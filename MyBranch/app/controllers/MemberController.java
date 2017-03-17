@@ -129,11 +129,10 @@ public class MemberController {
         }
         Member originalmember = jpaApi.em().find(Member.class, id);
         originalmember.setEmail(m.getEmail());
-        originalmember.setPwd(m.getPwd());
         originalmember.setDob(m.getDob());
         originalmember.setUser_Address(m.getUser_Address());
         jpaApi.em().merge(originalmember);
-        return ok("the following member is updated" + originalmember.getEmail() + originalmember.getPwd() + originalmember.getDob() + originalmember.getUser_Address());
+        return ok("the following member is updated" + originalmember.getEmail() + originalmember.getDob() + originalmember.getUser_Address());
     }
 
     @Transactional

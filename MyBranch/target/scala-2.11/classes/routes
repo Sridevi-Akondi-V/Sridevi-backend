@@ -25,7 +25,7 @@ GET     /search_restaurants_by_name_area                                        
 GET     /search_nearby_restaurants/:latitude                                        controllers.RestaurantController.getNearbyRestaurants(latitude: java.lang.Double,longitude: java.lang.Double)
 GET     /filter                                                                     controllers.RestaurantController.getRestaurantsBySearchFilter(keyword: java.lang.String ?= null , collection: java.lang.String?= null, time: java.lang.String?= null , cost1: Integer?= null, cost2: Integer?= null, delivery: Integer?= null)
 GET     /search/:keyword                                                            controllers.RestaurantController.getNearbyRestaurantsBySearch(keyword: java.lang.String)
-GET     /filtersearch                                                               controllers.RestaurantController.getRestaurantsSearch(keyword: java.lang.String ?= null , collection: java.lang.String?= null, time: java.lang.String?= null , cost1: Integer?= null, cost2: Integer?= null, delivery: Integer?= null)
+GET     /filter_search                                                               controllers.RestaurantController.getRestaurantsSearch(keyword: java.lang.String ?= null , collection: java.lang.String?= null, time: java.lang.String?= null , cost1: Integer?= null, cost2: Integer?= null, delivery: Integer?= null)
 
 
 
