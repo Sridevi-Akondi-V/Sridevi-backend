@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Thu Mar 16 23:12:45 IST 2017
+// @DATE:Fri Mar 17 16:13:13 IST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -56,6 +56,12 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "ratings_reviews" + queryString(List(if(id == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("id", id)))))
     }
   
+    // @LINE:28
+    def getRestaurantsSearch(collection:java.lang.String = null, time:java.lang.String = null , cost1:Integer = null, cost2:Integer = null, delivery:Integer = null): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "filter_search" + queryString(List(if(collection == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("collection", collection)), if(time == null ) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("time", time)), if(cost1 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost1", cost1)), if(cost2 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost2", cost2)), if(delivery == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("delivery", delivery)))))
+    }
+  
     // @LINE:11
     def getRestaurantByID(id:Integer): Call = {
       import ReverseRouteContext.empty
@@ -66,12 +72,6 @@ package controllers {
     def getNearbyRestaurantsBySearch(keyword:java.lang.String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "search/" + implicitly[PathBindable[java.lang.String]].unbind("keyword", keyword))
-    }
-  
-    // @LINE:28
-    def getRestaurantsSearch(keyword:java.lang.String = null , collection:java.lang.String = null, time:java.lang.String = null , cost1:Integer = null, cost2:Integer = null, delivery:Integer = null): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "filter_search" + queryString(List(if(keyword == null ) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("keyword", keyword)), if(collection == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("collection", collection)), if(time == null ) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("time", time)), if(cost1 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost1", cost1)), if(cost2 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost2", cost2)), if(delivery == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("delivery", delivery)))))
     }
   
     // @LINE:24
