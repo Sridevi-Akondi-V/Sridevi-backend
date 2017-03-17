@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Fri Mar 17 16:13:13 IST 2017
+// @DATE:Fri Mar 17 23:03:01 IST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -57,9 +57,9 @@ package controllers {
     }
   
     // @LINE:28
-    def getRestaurantsSearch(collection:java.lang.String = null, time:java.lang.String = null , cost1:Integer = null, cost2:Integer = null, delivery:Integer = null): Call = {
+    def getRestaurantsSearch(collection:java.lang.String = null, time:java.lang.String = null , cost1:Integer = 0 , cost2:Integer = 0 , delivery:Integer = 2): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "filter_search" + queryString(List(if(collection == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("collection", collection)), if(time == null ) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("time", time)), if(cost1 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost1", cost1)), if(cost2 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost2", cost2)), if(delivery == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("delivery", delivery)))))
+      Call("GET", _prefix + { _defaultPrefix } + "filter_search" + queryString(List(if(collection == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("collection", collection)), if(time == null ) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("time", time)), if(cost1 == 0 ) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost1", cost1)), if(cost2 == 0 ) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost2", cost2)), if(delivery == 2) None else Some(implicitly[QueryStringBindable[Integer]].unbind("delivery", delivery)))))
     }
   
     // @LINE:11

@@ -251,7 +251,7 @@ public class RestaurantController {
     @Transactional
     public Result getRestaurantsSearch(String collection, String time ,Integer cost1, Integer cost2,  Integer delivery) {
         List rest;
-        String q1="";
+        String q1="",q2="";
         Query query1;
         JsonNode json;
         Time time1 = new Time(-1,-1,-1);
@@ -275,12 +275,13 @@ public class RestaurantController {
             Map<String,String> filter = new HashMap<>();
             Map<String,String> filter1 = new HashMap<>();
             Map<String,String> filter2 = new HashMap<>();
+            Map<String,String> filter3 = new HashMap<>();
 
             if(null != collection) {
                     filter.put("  Collection_Type = ", "?1" );
                 }
 
-                if (null!= delivery) {
+                if (2 != delivery) {
                     filter.put("  Free_Delivery = ", "?5");
                 }
 
@@ -291,19 +292,29 @@ public class RestaurantController {
                     filter.putAll(filter1);
                 }
 
-                if( cost1 != null && cost2 != null) {
+
+                if( cost1 != 0 && cost2 != 0 ) {
                         filter2.put(" Cost >= ", "?3");
                         filter2.put(" Cost <= ", "?4");
                         filter.putAll(filter2);
                     }
-
+                if( null== collection || 0 ==cost1 || 0 == cost2 || 2 == delivery) {
+                    filter.put("  Collection_Type = ", "?1" );
+                    filter3.put("  Free_Delivery = ", "?5");
+                    filter2.put(" Cost >= ", "?3");
+                    filter2.put(" Cost <= ", "?4");
+                    filter3.putAll(filter2);
+                }
 
             //Logger.debug(String.valueOf(filter.get("  Collection_Type = ")));
             filter.values().removeIf(Objects::isNull);
             Joiner.MapJoiner joiner = Joiner.on(" and ").withKeyValueSeparator("");
             q1= joiner.join(filter);
             Logger.debug(q1);
-            query1 = jpaApi.em().createNativeQuery("Select * from tb_restaurants where (" + q1+ ")");
+            Joiner.MapJoiner joiner1 = Joiner.on(" or ").withKeyValueSeparator("");
+            q2= joiner1.join(filter3);
+            Logger.debug(q2);
+            query1 = jpaApi.em().createNativeQuery("Select * from tb_restaurants where (" + q1+ " or " +q2+ ")");
             query1.setParameter(1, collection);
             query1.setParameter(2, time1);
             query1.setParameter(3, cost1);
@@ -313,7 +324,6 @@ public class RestaurantController {
             rest = query1.getResultList();
             json = Json.toJson(rest);
             return ok(json);
-
     }
 
     @Transactional
