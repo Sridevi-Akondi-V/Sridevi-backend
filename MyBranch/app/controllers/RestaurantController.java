@@ -374,7 +374,7 @@ public class RestaurantController {
 
 
     @Transactional
-    public Result getSearch(String collection, String time ,Integer cost1, Integer cost2,  Integer delivery) {
+    public Result getRestaurantsByFilters(String collection, String time ,Integer cost1, Integer cost2,  Integer delivery) {
         List rest;
         String q1="",q2="";
         Query query1;
@@ -384,7 +384,6 @@ public class RestaurantController {
             time1 = java.sql.Time.valueOf(time);
             Logger.debug("",time1.toString());
         }
-
         Logger.debug(time1.toString());
         /*String q = "SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN BOOLEAN MODE)";
         if(null != keyword && null == collection && null== time && (null == cost1 && null == cost2) && null == delivery) {
@@ -395,32 +394,20 @@ public class RestaurantController {
             json= Json.toJson(rest);
             return ok(json);
         } */
-
-
         Map<String,String> filter = new HashMap<>();
-        Map<String,String> filter1 = new HashMap<>();
         Map<String,String> filter2 = new HashMap<>();
         Map<String,String> filter3 = new HashMap<>();
-        Map<String,String> filter4 = new HashMap<>();
-
 
         if(null != collection) {
             filter.put("  Collection_Type = ", "?1" );
 
         }
-
         if (2 != delivery) {
             filter.put("  Free_Delivery = ", "?5");
         }
-
         if( time1 != null ) {
-
-            filter1.put("  Opening_Time <= ", "?2");
-            filter1.put("  Closing_Time  >= ", "?2");
-            filter.putAll(filter1);
+            filter.put("  Opening_Time <= ", "?2");
         }
-
-
         if( cost1 != 0 && cost2 != 0 ) {
             filter2.put(" Cost >= ", "?3");
             filter2.put(" Cost <= ", "?4");
@@ -442,7 +429,6 @@ public class RestaurantController {
             q2= joiner1.join(filter3);
             query1 = jpaApi.em().createNativeQuery("Select * from tb_restaurants where (" + q1+ ") or " + q2 +"");
             Logger.debug(q2);
-
         }
         query1.setParameter(1, collection);
         query1.setParameter(2, time1);
