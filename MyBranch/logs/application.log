@@ -1,34 +1,1105 @@
-2017-03-19 17:05:55,739 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2017-03-19 17:05:56,659 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
-2017-03-19 17:05:56,683 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-19 17:06:01,928 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2017-03-19 17:06:02,760 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - 22:58:59
-2017-03-19 17:06:02,776 [DEBUG] from application in application-akka.actor.default-dispatcher-4 -   Collection_Type = ?1 and   Opening_Time <= ?2 and   Closing_Time  >= ?2
-2017-03-19 17:06:02,829 [DEBUG] from application in application-akka.actor.default-dispatcher-4 -   Free_Delivery = ?5 or  Cost =?4 or  Cost < ?3
-2017-03-19 17:06:02,829 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - org.hibernate.jpa.internal.QueryImpl@199af59c
-2017-03-19 17:07:09,804 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - 22:58:59
-2017-03-19 17:07:09,804 [DEBUG] from application in application-akka.actor.default-dispatcher-6 -   Collection_Type = ?1 and   Opening_Time <= ?2 and   Closing_Time  >= ?2
-2017-03-19 17:07:09,805 [DEBUG] from application in application-akka.actor.default-dispatcher-6 -   Free_Delivery = ?5 or  Cost =?4 or  Cost < ?3
-2017-03-19 17:07:09,805 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - org.hibernate.jpa.internal.QueryImpl@3350c2cb
-2017-03-19 17:07:42,811 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 22:58:59
-2017-03-19 17:07:42,811 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -   Collection_Type = ?1 and   Opening_Time <= ?2 and   Closing_Time  >= ?2
-2017-03-19 17:07:42,811 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -   Free_Delivery = ?5 or  Cost =?4 or  Cost < ?3
-2017-03-19 17:07:42,811 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - org.hibernate.jpa.internal.QueryImpl@58526887
-2017-03-19 17:09:26,144 [INFO] from application in application-akka.actor.default-dispatcher-9 - Shutting down connection pool.
-2017-03-19 17:09:26,377 [INFO] from application in application-akka.actor.default-dispatcher-9 - Creating Pool for datasource 'default'
-2017-03-19 17:09:26,384 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-9 - datasource [default] bound to JNDI as DefaultDS
-2017-03-19 17:09:26,385 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-9 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
-2017-03-19 17:09:27,164 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-9 - Application started (Dev)
-2017-03-19 17:09:27,217 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - 22:58:59
-2017-03-19 17:09:27,217 [DEBUG] from application in application-akka.actor.default-dispatcher-9 -   Collection_Type = ?1 and   Opening_Time <= ?2
-2017-03-19 17:09:27,217 [DEBUG] from application in application-akka.actor.default-dispatcher-9 -   Free_Delivery = ?5 or  Cost =?4 or  Cost < ?3
-2017-03-19 17:09:27,217 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - org.hibernate.jpa.internal.QueryImpl@5cd0c0e5
-2017-03-19 17:10:02,332 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - 22:58:59
-2017-03-19 17:10:02,332 [DEBUG] from application in application-akka.actor.default-dispatcher-5 -   Collection_Type = ?1 and   Opening_Time <= ?2
-2017-03-19 17:10:02,332 [DEBUG] from application in application-akka.actor.default-dispatcher-5 -   Free_Delivery = ?5 or  Cost =?4 or  Cost < ?3
-2017-03-19 17:10:02,332 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - org.hibernate.jpa.internal.QueryImpl@79fa62be
-2017-03-19 17:10:13,802 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - 
-2017-03-19 17:10:13,807 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - 08:00:00
-2017-03-19 17:10:13,807 [DEBUG] from application in application-akka.actor.default-dispatcher-2 -  Cost >= ?3 and  Cost <= ?4 and   Free_Delivery = ?5 and   Collection_Type = ?1 and   Opening_Time <= ?2
-2017-03-19 17:10:13,807 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - org.hibernate.jpa.internal.QueryImpl@19ec4cb8
-2017-03-19 17:10:18,023 [INFO] from application in pool-4-thread-3 - Shutting down connection pool.
+2017-03-19 17:21:00,749 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2017-03-19 17:21:02,387 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:21:02,631 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:21:14,613 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2017-03-19 17:23:55,298 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - 
+2017-03-19 17:23:55,344 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - 08:00:00
+2017-03-19 17:23:55,360 [DEBUG] from application in application-akka.actor.default-dispatcher-8 -  Cost >= ?3 and  Cost <= ?4 and   Free_Delivery = ?5 and   Collection_Type = ?1 and   Opening_Time <= ?2
+2017-03-19 17:23:55,413 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - org.hibernate.jpa.internal.QueryImpl@5d31b112
+2017-03-19 17:24:08,360 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 
+2017-03-19 17:24:08,360 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 08:00:00
+2017-03-19 17:24:08,360 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -  Cost >= ?3 and  Cost <= ?4 and   Collection_Type = ?1 and   Opening_Time <= ?2
+2017-03-19 17:24:08,360 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -   Free_Delivery = ?5
+2017-03-19 17:24:08,360 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - org.hibernate.jpa.internal.QueryImpl@24b2f73d
+2017-03-19 17:24:13,350 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - 
+2017-03-19 17:24:13,350 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - 08:00:00
+2017-03-19 17:24:13,350 [DEBUG] from application in application-akka.actor.default-dispatcher-8 -   Collection_Type = ?1 and   Opening_Time <= ?2
+2017-03-19 17:24:13,351 [DEBUG] from application in application-akka.actor.default-dispatcher-8 -   Free_Delivery = ?5 or  Cost =?4 or  Cost < ?3
+2017-03-19 17:24:13,351 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - org.hibernate.jpa.internal.QueryImpl@33084357
+2017-03-19 17:24:19,219 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 22:58:59
+2017-03-19 17:24:19,219 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -   Collection_Type = ?1 and   Opening_Time <= ?2
+2017-03-19 17:24:19,220 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -   Free_Delivery = ?5 or  Cost =?4 or  Cost < ?3
+2017-03-19 17:24:19,220 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - org.hibernate.jpa.internal.QueryImpl@7da87bdd
+2017-03-19 17:24:25,064 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - 22:58:59
+2017-03-19 17:24:25,064 [DEBUG] from application in application-akka.actor.default-dispatcher-8 -   Opening_Time <= ?2
+2017-03-19 17:24:25,065 [DEBUG] from application in application-akka.actor.default-dispatcher-8 -   Free_Delivery = ?5 or  Cost =?4 or  Cost < ?3
+2017-03-19 17:24:25,216 [ERROR] from application in application-akka.actor.default-dispatcher-8 - 
+
+! @73d1pl3ni - Internal server error, for (GET) [/filter_restaurants] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IllegalArgumentException: Parameter with that position [1] did not exist]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.scala$concurrent$impl$Promise$DefaultPromise$$dispatchOrAddCallback(Promise.scala:280)
+	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:270)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Parameter with that position [1] did not exist
+	at org.hibernate.jpa.spi.BaseQueryImpl.findParameterRegistration(BaseQueryImpl.java:502)
+	at org.hibernate.jpa.spi.BaseQueryImpl.setParameter(BaseQueryImpl.java:692)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:181)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:32)
+	at controllers.RestaurantController.getRestaurantsByFilters(RestaurantController.java:440)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.db.jpa.TransactionalAction.lambda$call$4(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$3(DefaultJPAApi.java:196)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:137)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:195)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	... 13 common frames omitted
+2017-03-19 17:29:39,208 [INFO] from application in application-akka.actor.default-dispatcher-9 - Shutting down connection pool.
+2017-03-19 17:29:40,962 [INFO] from application in application-akka.actor.default-dispatcher-9 - Creating Pool for datasource 'default'
+2017-03-19 17:29:41,738 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-9 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:29:42,254 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-9 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:29:43,904 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-9 - Application started (Dev)
+2017-03-19 17:29:44,083 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - 
+2017-03-19 17:29:44,083 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - 08:00:00
+2017-03-19 17:29:44,083 [DEBUG] from application in application-akka.actor.default-dispatcher-6 -  Cost >= ?3 and  Cost <= ?4 and   Free_Delivery = ?5 and   Collection_Type = ?1 and   Opening_Time <= ?2
+2017-03-19 17:29:44,087 [ERROR] from application in application-akka.actor.default-dispatcher-6 - 
+
+! @73d20d7i0 - Internal server error, for (GET) [/filter_restaurants?keyword=Banjara&collection=Breakfast&time=8:00:00&cost1=500&cost2=1000&delivery=0] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IllegalArgumentException: Parameter with that position [6] did not exist]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.scala$concurrent$impl$Promise$DefaultPromise$$dispatchOrAddCallback(Promise.scala:280)
+	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:270)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Parameter with that position [6] did not exist
+	at org.hibernate.jpa.spi.BaseQueryImpl.findParameterRegistration(BaseQueryImpl.java:502)
+	at org.hibernate.jpa.spi.BaseQueryImpl.setParameter(BaseQueryImpl.java:692)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:181)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:32)
+	at controllers.RestaurantController.getRestaurantsByFilters(RestaurantController.java:441)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.db.jpa.TransactionalAction.lambda$call$4(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$3(DefaultJPAApi.java:196)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:137)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:195)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	... 13 common frames omitted
+2017-03-19 17:30:35,131 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2017-03-19 17:30:35,347 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2017-03-19 17:30:35,363 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-4 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:30:35,396 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:30:36,194 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2017-03-19 17:30:36,226 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - 
+2017-03-19 17:30:36,226 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - 08:00:00
+2017-03-19 17:30:36,226 [DEBUG] from application in application-akka.actor.default-dispatcher-2 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:30:36,226 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - org.hibernate.jpa.internal.QueryImpl@6a7b0f15
+2017-03-19 17:30:36,286 [WARN] from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in application-akka.actor.default-dispatcher-2 - SQL Error: 1064, SQLState: 42000
+2017-03-19 17:30:36,290 [ERROR] from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in application-akka.actor.default-dispatcher-2 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT * from (SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Rest' at line 1
+2017-03-19 17:30:36,304 [ERROR] from application in application-akka.actor.default-dispatcher-2 - 
+
+! @73d20g6o3 - Internal server error, for (GET) [/filter_restaurants?keyword=Banjara&collection=Breakfast&time=8:00:00&cost1=500&cost2=1000&delivery=0] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.scala$concurrent$impl$Promise$DefaultPromise$$dispatchOrAddCallback(Promise.scala:280)
+	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:270)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1692)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1602)
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:492)
+	at controllers.RestaurantController.getRestaurantsByFilters(RestaurantController.java:443)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.db.jpa.TransactionalAction.lambda$call$4(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$3(DefaultJPAApi.java:196)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:137)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:195)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	... 13 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:79)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2115)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1898)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1874)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:919)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:336)
+	at org.hibernate.loader.Loader.doList(Loader.java:2610)
+	at org.hibernate.loader.Loader.doList(Loader.java:2593)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2422)
+	at org.hibernate.loader.Loader.list(Loader.java:2417)
+	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:336)
+	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1980)
+	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:322)
+	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:125)
+	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:606)
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:483)
+	... 46 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT * from (SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Rest' at line 1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:400)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3847)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3783)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2447)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2594)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1901)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2002)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:70)
+	... 61 common frames omitted
+2017-03-19 17:31:10,530 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2017-03-19 17:31:10,765 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2017-03-19 17:31:10,765 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-3 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:31:10,782 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:31:11,576 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
+2017-03-19 17:31:11,601 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 
+2017-03-19 17:31:11,601 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 08:00:00
+2017-03-19 17:31:11,602 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:31:11,603 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - org.hibernate.jpa.internal.QueryImpl@706d8300
+2017-03-19 17:31:45,064 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2017-03-19 17:31:45,248 [INFO] from application in application-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
+2017-03-19 17:31:45,264 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-2 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:31:45,264 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:31:45,993 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
+2017-03-19 17:31:46,027 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - 
+2017-03-19 17:31:46,027 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - 08:00:00
+2017-03-19 17:31:46,028 [DEBUG] from application in application-akka.actor.default-dispatcher-8 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:31:46,028 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - org.hibernate.jpa.internal.QueryImpl@56075f9b
+2017-03-19 17:33:07,176 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
+2017-03-19 17:33:07,342 [INFO] from application in application-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
+2017-03-19 17:33:07,360 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-6 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:33:07,361 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:33:08,122 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
+2017-03-19 17:33:08,144 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - 
+2017-03-19 17:33:08,145 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - 08:00:00
+2017-03-19 17:33:08,146 [DEBUG] from application in application-akka.actor.default-dispatcher-5 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:33:08,146 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - org.hibernate.jpa.internal.QueryImpl@64fe64fb
+2017-03-19 17:34:04,410 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2017-03-19 17:34:04,615 [INFO] from application in application-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
+2017-03-19 17:34:04,623 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-2 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:34:04,638 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:34:05,210 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
+2017-03-19 17:34:05,226 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - 
+2017-03-19 17:34:05,226 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - 08:00:00
+2017-03-19 17:34:05,226 [DEBUG] from application in application-akka.actor.default-dispatcher-9 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:34:05,226 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - org.hibernate.jpa.internal.QueryImpl@4334171
+2017-03-19 17:34:05,242 [WARN] from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in application-akka.actor.default-dispatcher-9 - SQL Error: 1064, SQLState: 42000
+2017-03-19 17:34:05,242 [ERROR] from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in application-akka.actor.default-dispatcher-9 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where ( Cost >= 500 and  Cost <= 1000 and   Free_Delivery = 0 and   Collection_T' at line 1
+2017-03-19 17:34:05,242 [ERROR] from application in application-akka.actor.default-dispatcher-9 - 
+
+! @73d21240b - Internal server error, for (GET) [/filter_restaurants?keyword=Banjara&collection=Breakfast&time=8:00:00&cost1=500&cost2=1000&delivery=0] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.scala$concurrent$impl$Promise$DefaultPromise$$dispatchOrAddCallback(Promise.scala:280)
+	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:270)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1692)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1602)
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:492)
+	at controllers.RestaurantController.getRestaurantsByFilters(RestaurantController.java:443)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.db.jpa.TransactionalAction.lambda$call$4(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$3(DefaultJPAApi.java:196)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:137)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:195)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	... 13 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:79)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2115)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1898)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1874)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:919)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:336)
+	at org.hibernate.loader.Loader.doList(Loader.java:2610)
+	at org.hibernate.loader.Loader.doList(Loader.java:2593)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2422)
+	at org.hibernate.loader.Loader.list(Loader.java:2417)
+	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:336)
+	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1980)
+	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:322)
+	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:125)
+	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:606)
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:483)
+	... 46 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where ( Cost >= 500 and  Cost <= 1000 and   Free_Delivery = 0 and   Collection_T' at line 1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:400)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3847)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3783)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2447)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2594)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1901)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2002)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:70)
+	... 61 common frames omitted
+2017-03-19 17:36:00,321 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2017-03-19 17:36:00,477 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2017-03-19 17:36:00,477 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-4 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:36:00,493 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:36:01,247 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2017-03-19 17:36:01,270 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - 
+2017-03-19 17:36:01,270 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - 08:00:00
+2017-03-19 17:36:01,271 [DEBUG] from application in application-akka.actor.default-dispatcher-3 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:36:01,271 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - org.hibernate.jpa.internal.QueryImpl@48e987a3
+2017-03-19 17:36:12,051 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - 
+2017-03-19 17:36:12,051 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - 07:00:00
+2017-03-19 17:36:12,051 [DEBUG] from application in application-akka.actor.default-dispatcher-5 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:36:12,051 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - org.hibernate.jpa.internal.QueryImpl@679e4902
+2017-03-19 17:36:17,880 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - 
+2017-03-19 17:36:17,880 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - 07:00:00
+2017-03-19 17:36:17,880 [DEBUG] from application in application-akka.actor.default-dispatcher-4 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:36:17,880 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - org.hibernate.jpa.internal.QueryImpl@38c862e8
+2017-03-19 17:38:34,145 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
+2017-03-19 17:38:34,301 [INFO] from application in application-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
+2017-03-19 17:38:34,392 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-6 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:38:34,408 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:38:34,963 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
+2017-03-19 17:38:34,978 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 
+2017-03-19 17:38:34,978 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 07:00:00
+2017-03-19 17:38:34,978 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:38:34,978 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - org.hibernate.jpa.internal.QueryImpl@11751ae9
+2017-03-19 17:39:11,992 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2017-03-19 17:39:12,192 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2017-03-19 17:39:12,214 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-4 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:39:12,230 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:39:12,803 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2017-03-19 17:39:12,818 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - 22:58:59
+2017-03-19 17:39:12,818 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - +
+2017-03-19 17:39:31,652 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - 22:58:59
+2017-03-19 17:39:31,653 [DEBUG] from application in application-akka.actor.default-dispatcher-3 -   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:39:31,658 [ERROR] from application in application-akka.actor.default-dispatcher-3 - 
+
+! @73d21kimn - Internal server error, for (GET) [/filter_restaurants?keyword=Banjara&collection=Breakfast] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IllegalArgumentException: Parameter with that position [4] did not exist]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.scala$concurrent$impl$Promise$DefaultPromise$$dispatchOrAddCallback(Promise.scala:280)
+	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:270)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Parameter with that position [4] did not exist
+	at org.hibernate.jpa.spi.BaseQueryImpl.findParameterRegistration(BaseQueryImpl.java:502)
+	at org.hibernate.jpa.spi.BaseQueryImpl.setParameter(BaseQueryImpl.java:692)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:181)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:32)
+	at controllers.RestaurantController.getRestaurantsByFilters(RestaurantController.java:437)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.db.jpa.TransactionalAction.lambda$call$4(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$3(DefaultJPAApi.java:196)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:137)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:195)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	... 13 common frames omitted
+2017-03-19 17:40:51,117 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2017-03-19 17:40:51,297 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
+2017-03-19 17:40:51,322 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-5 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:40:51,322 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:40:51,945 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2017-03-19 17:40:51,978 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 22:58:59
+2017-03-19 17:40:51,978 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:40:51,978 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -   Free_Delivery = ?5 or  Cost =?4 or  Cost < ?3
+2017-03-19 17:40:51,978 [ERROR] from application in application-akka.actor.default-dispatcher-7 - 
+
+! @73d21p7i3 - Internal server error, for (GET) [/filter_restaurants?keyword=Banjara&collection=Breakfast] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IllegalArgumentException: Parameter with that position [6] did not exist]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.scala$concurrent$impl$Promise$DefaultPromise$$dispatchOrAddCallback(Promise.scala:280)
+	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:270)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Parameter with that position [6] did not exist
+	at org.hibernate.jpa.spi.BaseQueryImpl.findParameterRegistration(BaseQueryImpl.java:502)
+	at org.hibernate.jpa.spi.BaseQueryImpl.setParameter(BaseQueryImpl.java:692)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:181)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:32)
+	at controllers.RestaurantController.getRestaurantsByFilters(RestaurantController.java:439)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.db.jpa.TransactionalAction.lambda$call$4(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$3(DefaultJPAApi.java:196)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:137)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:195)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	... 13 common frames omitted
+2017-03-19 17:41:25,561 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2017-03-19 17:41:25,819 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2017-03-19 17:41:25,852 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-4 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:41:25,852 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:41:26,545 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2017-03-19 17:41:26,585 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - 22:58:59
+2017-03-19 17:41:26,585 [DEBUG] from application in application-akka.actor.default-dispatcher-2 -   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:41:26,585 [DEBUG] from application in application-akka.actor.default-dispatcher-2 -   Free_Delivery = ?6 or  Cost =?5 or  Cost < ?4
+2017-03-19 17:41:26,585 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - org.hibernate.jpa.internal.QueryImpl@3acdd63a
+2017-03-19 17:42:07,431 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - 
+2017-03-19 17:42:07,431 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - 08:00:00
+2017-03-19 17:42:07,431 [DEBUG] from application in application-akka.actor.default-dispatcher-3 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:42:07,432 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - org.hibernate.jpa.internal.QueryImpl@3b43ade3
+2017-03-19 17:42:16,528 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - 
+2017-03-19 17:42:16,528 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - 07:00:00
+2017-03-19 17:42:16,528 [DEBUG] from application in application-akka.actor.default-dispatcher-6 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:42:16,528 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - org.hibernate.jpa.internal.QueryImpl@38475c1b
+2017-03-19 17:43:37,444 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - 
+2017-03-19 17:43:37,444 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - 10:00:00
+2017-03-19 17:43:37,444 [DEBUG] from application in application-akka.actor.default-dispatcher-9 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:43:37,445 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - org.hibernate.jpa.internal.QueryImpl@4ecc548d
+2017-03-19 17:43:55,994 [DEBUG] from application in application-akka.actor.default-dispatcher-11 - 22:58:59
+2017-03-19 17:43:55,994 [DEBUG] from application in application-akka.actor.default-dispatcher-11 -   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:43:55,994 [DEBUG] from application in application-akka.actor.default-dispatcher-11 -  Cost =?5 or  Cost < ?4
+2017-03-19 17:43:55,994 [DEBUG] from application in application-akka.actor.default-dispatcher-11 - org.hibernate.jpa.internal.QueryImpl@4dd648c2
+2017-03-19 17:44:01,721 [DEBUG] from application in application-akka.actor.default-dispatcher-10 - 22:58:59
+2017-03-19 17:44:01,721 [DEBUG] from application in application-akka.actor.default-dispatcher-10 - +
+2017-03-19 17:44:11,323 [DEBUG] from application in application-akka.actor.default-dispatcher-11 - 22:58:59
+2017-03-19 17:44:11,323 [DEBUG] from application in application-akka.actor.default-dispatcher-11 - +
+2017-03-19 17:46:52,958 [INFO] from application in application-akka.actor.default-dispatcher-7 - Shutting down connection pool.
+2017-03-19 17:46:53,142 [INFO] from application in application-akka.actor.default-dispatcher-7 - Creating Pool for datasource 'default'
+2017-03-19 17:46:53,173 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-7 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:46:53,189 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-7 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:46:53,854 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-7 - Application started (Dev)
+2017-03-19 17:46:53,893 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - 
+2017-03-19 17:46:53,893 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - 10:00:00
+2017-03-19 17:46:53,893 [DEBUG] from application in application-akka.actor.default-dispatcher-8 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:46:53,893 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - org.hibernate.jpa.internal.QueryImpl@245ac8ab
+2017-03-19 17:46:53,893 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 
+2017-03-19 17:46:53,893 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 08:00:00
+2017-03-19 17:46:53,893 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -  Cost >= ?4 and  Cost <= ?5 and   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:46:53,893 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - org.hibernate.jpa.internal.QueryImpl@17fea8c
+2017-03-19 17:47:11,854 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - 
+2017-03-19 17:47:11,854 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - 10:00:00
+2017-03-19 17:47:11,854 [DEBUG] from application in application-akka.actor.default-dispatcher-4 -  Cost >= ?4 and  Cost <= ?5 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:47:11,854 [ERROR] from application in application-akka.actor.default-dispatcher-4 - 
+
+! @73d22kngj - Internal server error, for (GET) [/filter_restaurants?keyword=Banjara&collection=Breakfast&time=10:00:00&cost1=500&cost2=1000] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IllegalArgumentException: Parameter with that position [6] did not exist]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.scala$concurrent$impl$Promise$DefaultPromise$$dispatchOrAddCallback(Promise.scala:280)
+	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:270)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Parameter with that position [6] did not exist
+	at org.hibernate.jpa.spi.BaseQueryImpl.findParameterRegistration(BaseQueryImpl.java:502)
+	at org.hibernate.jpa.spi.BaseQueryImpl.setParameter(BaseQueryImpl.java:692)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:181)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:32)
+	at controllers.RestaurantController.getRestaurantsByFilters(RestaurantController.java:439)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.db.jpa.TransactionalAction.lambda$call$4(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$3(DefaultJPAApi.java:196)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:137)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:195)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	... 13 common frames omitted
+2017-03-19 17:48:01,505 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2017-03-19 17:48:01,667 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2017-03-19 17:48:01,667 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-3 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:48:01,683 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:48:02,221 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
+2017-03-19 17:48:02,237 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - 
+2017-03-19 17:48:02,237 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - 10:00:00
+2017-03-19 17:48:02,252 [DEBUG] from application in application-akka.actor.default-dispatcher-6 -  Cost >= ?4 and  Cost <= ?5 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:48:02,252 [ERROR] from application in application-akka.actor.default-dispatcher-6 - 
+
+! @73d22nk53 - Internal server error, for (GET) [/filter_restaurants?keyword=Banjara&collection=Breakfast&time=10:00:00&cost1=500&cost2=1000] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IllegalArgumentException: Parameter with that position [6] did not exist]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.scala$concurrent$impl$Promise$DefaultPromise$$dispatchOrAddCallback(Promise.scala:280)
+	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:270)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Parameter with that position [6] did not exist
+	at org.hibernate.jpa.spi.BaseQueryImpl.findParameterRegistration(BaseQueryImpl.java:502)
+	at org.hibernate.jpa.spi.BaseQueryImpl.setParameter(BaseQueryImpl.java:692)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:181)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:32)
+	at controllers.RestaurantController.getRestaurantsByFilters(RestaurantController.java:439)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.db.jpa.TransactionalAction.lambda$call$4(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$3(DefaultJPAApi.java:196)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:137)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:195)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	... 13 common frames omitted
+2017-03-19 17:50:22,648 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2017-03-19 17:50:22,918 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
+2017-03-19 17:50:23,002 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-5 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:50:23,018 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:50:24,155 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2017-03-19 17:50:24,156 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - 
+2017-03-19 17:50:24,156 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - 10:00:00
+2017-03-19 17:50:24,171 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - +
+2017-03-19 17:51:35,343 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 22:58:59
+2017-03-19 17:51:35,343 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - +
+2017-03-19 17:51:52,718 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - 22:58:59
+2017-03-19 17:51:52,718 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - +
+2017-03-19 17:52:18,858 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
+2017-03-19 17:52:19,027 [INFO] from application in application-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
+2017-03-19 17:52:19,043 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-8 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:52:19,047 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-8 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:52:19,548 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-8 - Application started (Dev)
+2017-03-19 17:52:19,564 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - 22:58:59
+2017-03-19 17:52:19,564 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - +
+2017-03-19 17:52:28,718 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - 22:58:59
+2017-03-19 17:52:28,718 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - +
+2017-03-19 17:53:41,201 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - 22:58:59
+2017-03-19 17:53:41,201 [DEBUG] from application in application-akka.actor.default-dispatcher-9 - +
+2017-03-19 17:54:18,177 [INFO] from application in application-akka.actor.default-dispatcher-11 - Shutting down connection pool.
+2017-03-19 17:54:18,315 [INFO] from application in application-akka.actor.default-dispatcher-11 - Creating Pool for datasource 'default'
+2017-03-19 17:54:18,331 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-11 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:54:18,331 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-11 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:54:18,831 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-11 - Application started (Dev)
+2017-03-19 17:54:18,847 [DEBUG] from application in application-akka.actor.default-dispatcher-2 - 22:58:59
+2017-03-19 17:54:18,847 [DEBUG] from application in application-akka.actor.default-dispatcher-2 -   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:54:18,863 [ERROR] from application in application-akka.actor.default-dispatcher-2 - 
+
+! @73d23j584 - Internal server error, for (GET) [/filter_restaurants?keyword=Banjara&collection=Breakfast&delivery=0] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IllegalArgumentException: Parameter with that position [4] did not exist]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1$$anonfun$apply$6.apply(Future.scala:344)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:599)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:597)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.scala$concurrent$impl$Promise$DefaultPromise$$dispatchOrAddCallback(Promise.scala:280)
+	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:270)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Parameter with that position [4] did not exist
+	at org.hibernate.jpa.spi.BaseQueryImpl.findParameterRegistration(BaseQueryImpl.java:502)
+	at org.hibernate.jpa.spi.BaseQueryImpl.setParameter(BaseQueryImpl.java:692)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:181)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:32)
+	at controllers.RestaurantController.getRestaurantsByFilters(RestaurantController.java:437)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(Routes.scala:792)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.db.jpa.TransactionalAction.lambda$call$4(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$3(DefaultJPAApi.java:196)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:137)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:195)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	... 13 common frames omitted
+2017-03-19 17:55:19,371 [INFO] from application in application-akka.actor.default-dispatcher-7 - Shutting down connection pool.
+2017-03-19 17:55:19,487 [INFO] from application in application-akka.actor.default-dispatcher-7 - Creating Pool for datasource 'default'
+2017-03-19 17:55:19,487 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-7 - datasource [default] bound to JNDI as DefaultDS
+2017-03-19 17:55:19,702 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-7 - Database [default] connected at jdbc:mysql://localhost/mavericks_project
+2017-03-19 17:55:20,704 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-7 - Application started (Dev)
+2017-03-19 17:55:20,719 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - 22:58:59
+2017-03-19 17:55:20,719 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -   Free_Delivery = ?6 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:55:20,719 [DEBUG] from application in application-akka.actor.default-dispatcher-7 -  Cost =?5 or  Cost < ?4
+2017-03-19 17:55:20,719 [DEBUG] from application in application-akka.actor.default-dispatcher-7 - org.hibernate.jpa.internal.QueryImpl@5ff2625f
+2017-03-19 17:56:00,685 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - 22:58:59
+2017-03-19 17:56:00,685 [DEBUG] from application in application-akka.actor.default-dispatcher-3 -  Cost >= ?4 and  Cost <= ?5 and   Collection_Type = ?2 and   Opening_Time <= ?3
+2017-03-19 17:56:00,686 [DEBUG] from application in application-akka.actor.default-dispatcher-3 -   Free_Delivery = ?6
+2017-03-19 17:56:00,686 [DEBUG] from application in application-akka.actor.default-dispatcher-3 - org.hibernate.jpa.internal.QueryImpl@7886b0e
+2017-03-19 17:58:12,660 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - 22:58:59
+2017-03-19 17:58:12,660 [DEBUG] from application in application-akka.actor.default-dispatcher-5 - +
+2017-03-19 17:58:38,678 [INFO] from application in pool-4-thread-6 - Shutting down connection pool.

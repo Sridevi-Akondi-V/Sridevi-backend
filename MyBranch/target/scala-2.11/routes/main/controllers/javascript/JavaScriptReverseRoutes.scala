@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Sun Mar 19 16:59:56 IST 2017
+// @DATE:Sun Mar 19 17:46:25 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -22,6 +22,16 @@ package controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:29
+    def getRestaurantsByFilters: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RestaurantController.getRestaurantsByFilters",
+      """
+        function(keyword0,collection1,time2,cost13,cost24,delivery5) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "filter_restaurants" + _qS([(keyword0 == null ? null : (""" + implicitly[QueryStringBindable[java.lang.String]].javascriptUnbind + """)("keyword", keyword0)), (collection1 == null ? null : (""" + implicitly[QueryStringBindable[java.lang.String]].javascriptUnbind + """)("collection", collection1)), (time2 == null ? null : (""" + implicitly[QueryStringBindable[java.lang.String]].javascriptUnbind + """)("time", time2)), (cost13 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("cost1", cost13)), (cost24 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("cost2", cost24)), (delivery5 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("delivery", delivery5))])})
+        }
+      """
+    )
   
     // @LINE:20
     def deleteRestAdmin: JavaScriptReverseRoute = JavaScriptReverseRoute(
@@ -109,16 +119,6 @@ package controllers.javascript {
       """
         function(keyword0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search/" + (""" + implicitly[PathBindable[java.lang.String]].javascriptUnbind + """)("keyword", keyword0)})
-        }
-      """
-    )
-  
-    // @LINE:29
-    def getSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.RestaurantController.getSearch",
-      """
-        function(collection0,time1,cost12,cost23,delivery4) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "filter_search_123" + _qS([(collection0 == null ? null : (""" + implicitly[QueryStringBindable[java.lang.String]].javascriptUnbind + """)("collection", collection0)), (time1 == null ? null : (""" + implicitly[QueryStringBindable[java.lang.String]].javascriptUnbind + """)("time", time1)), (cost12 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("cost1", cost12)), (cost23 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("cost2", cost23)), (delivery4 == null ? null : (""" + implicitly[QueryStringBindable[Integer]].javascriptUnbind + """)("delivery", delivery4))])})
         }
       """
     )

@@ -374,9 +374,9 @@ public class RestaurantController {
 
 
     @Transactional
-    public Result getRestaurantsByFilters(String collection, String time ,Integer cost1, Integer cost2,  Integer delivery) {
+    public Result getRestaurantsByFilters(String keyword, String collection, String time ,Integer cost1, Integer cost2,  Integer delivery) {
         List rest;
-        String q1="",q2="";
+        String q1="",q2="",q="";
         Query query1;
         JsonNode json;
         Time time1 = new Time(-1,-1,-1);
@@ -385,7 +385,7 @@ public class RestaurantController {
             Logger.debug("",time1.toString());
         }
         Logger.debug(time1.toString());
-        /*String q = "SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN BOOLEAN MODE)";
+        q = "SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN BOOLEAN MODE)";
         if(null != keyword && null == collection && null== time && (null == cost1 && null == cost2) && null == delivery) {
             Query query = jpaApi.em().createNativeQuery(q);
             query.setParameter(1,keyword.concat("*"));
@@ -393,52 +393,55 @@ public class RestaurantController {
             rest = query.getResultList();
             json= Json.toJson(rest);
             return ok(json);
-        } */
-        Map<String,String> filter = new HashMap<>();
-        Map<String,String> filter2 = new HashMap<>();
-        Map<String,String> filter3 = new HashMap<>();
+        }
+        else {
+            Map<String, String> filter = new HashMap<>();
+            Map<String, String> filter2 = new HashMap<>();
+            Map<String, String> filter3 = new HashMap<>();
 
-        if(null != collection) {
-            filter.put("  Collection_Type = ", "?1" );
+            if (null != keyword && null != collection) {
+                filter.put("  Collection_Type = ", "?2");
 
-        }
-        if (2 != delivery) {
-            filter.put("  Free_Delivery = ", "?5");
-        }
-        if( time1 != null ) {
-            filter.put("  Opening_Time <= ", "?2");
-        }
-        if( cost1 != 0 && cost2 != 0 ) {
-            filter2.put(" Cost >= ", "?3");
-            filter2.put(" Cost <= ", "?4");
-            filter.putAll(filter2);
-        }
-        filter.values().removeIf(Objects::isNull);
-        Joiner.MapJoiner joiner = Joiner.on(" and ").withKeyValueSeparator("");
-        q1= joiner.join(filter);
-        Logger.debug(q1);
-        query1 = jpaApi.em().createNativeQuery("Select * from tb_restaurants where (" + q1+ ")");
-        if(  0 == cost1 || 0 == cost2 || 2 == delivery) {
-            if(2==delivery)
-            filter3.put("  Free_Delivery = ", "?5");
-            if(0==cost1 && 0==cost2) {
-                filter3.put(" Cost < ","?3");
-                filter3.put(" Cost =","?4");
+            }
+            if (null != keyword && null != delivery) {
+                filter.put("  Free_Delivery = ", "?6");
+            }
+            if (null != keyword && time1 != null) {
+                filter.put("  Opening_Time <= ", "?3");
+            }
+            if (null != keyword && (cost1 != null && cost2 != null)) {
+                filter2.put(" Cost >= ", "?4");
+                filter2.put(" Cost <= ", "?5");
+                filter.putAll(filter2);
+            }
+            filter.values().removeIf(Objects::isNull);
+            Joiner.MapJoiner joiner = Joiner.on(" and ").withKeyValueSeparator("");
+            q1 = joiner.join(filter);
+            Logger.debug(q1);
+            query1 = jpaApi.em().createNativeQuery("SELECT * from (" + q + ") AS T where (" + q1 + ")");
+            if( null == cost1 || null == cost2 || null == delivery) {
+            if(null ==delivery)
+            filter3.put("  Free_Delivery = ", "?6");
+            if(null ==cost1 && null ==cost2) {
+                filter3.put(" Cost < ","?4");
+                filter3.put(" Cost =","?5");
             }
             Joiner.MapJoiner joiner1 = Joiner.on(" or ").withKeyValueSeparator("");
             q2= joiner1.join(filter3);
-            query1 = jpaApi.em().createNativeQuery("Select * from tb_restaurants where (" + q1+ ") or " + q2 +"");
+            query1 = jpaApi.em().createNativeQuery("SELECT * from (" + q + ") AS T where (" + q1 + ") or " + q2 +"");
             Logger.debug(q2);
         }
-        query1.setParameter(1, collection);
-        query1.setParameter(2, time1);
-        query1.setParameter(3, cost1);
-        query1.setParameter(4, cost2);
-        query1.setParameter(5, delivery);
-        Logger.debug(query1.toString());
-        rest = query1.getResultList();
-        json = Json.toJson(rest);
-        return ok(json);
+            query1.setParameter(1, keyword.concat("*"));
+            query1.setParameter(2, collection);
+            query1.setParameter(3, time1);
+            query1.setParameter(4, cost1);
+            query1.setParameter(5, cost2);
+            query1.setParameter(6, delivery);
+            Logger.debug(query1.toString());
+            rest = query1.getResultList();
+            json = Json.toJson(rest);
+            return ok(json);
+        }
     }
 
     @Transactional
