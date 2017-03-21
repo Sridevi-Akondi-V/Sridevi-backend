@@ -204,9 +204,13 @@ public class RestaurantController {
         query.setParameter(1,keyword.concat("*"));
         List<Restaurant> rest = query.getResultList();
         JsonNode json = Json.toJson(rest);
-        if(rest.isEmpty()) {
-            return notFound();
-        }
+        /*if(rest.isEmpty()) {
+            Query query1=jpaApi.em().createNativeQuery("SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 WITH QUERY EXPANSION)");
+            query1.setParameter(1,keyword.concat("*"));
+            List<Restaurant> rest1 = query1.getResultList();
+            JsonNode json1 = Json.toJson(rest1);
+            return ok(json1);
+        }*/
         return ok(json);
     }
 
@@ -337,7 +341,6 @@ public class RestaurantController {
     }
 
     @Transactional
-    @Authenticator
     public  Result Reviews_Ratings_Restaurant(Integer id) {
         List<Rating> ratingList;
         String q = "SELECT tb_ratings.rid, tb_restaurants.id, tb_member.Username, tb_ratings.Rating, tb_ratings.User_Reviews FROM mavericks_project.tb_ratings inner join tb_restaurants on tb_restaurants.id = tb_ratings.r_fid inner join tb_member on tb_member.Username = tb_ratings.uname_fid where tb_restaurants.id = ?1";

@@ -23,12 +23,12 @@ DROP TABLE IF EXISTS `tb_ratings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_ratings` (
-  `id` int(11) NOT NULL,
   `Rating` double(2,1) DEFAULT NULL,
   `uname_fid` varchar(255) NOT NULL,
   `r_fid` int(11) NOT NULL,
   `User_Reviews` text,
-  PRIMARY KEY (`id`)
+  `rid` int(11) NOT NULL,
+  PRIMARY KEY (`rid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -38,7 +38,7 @@ CREATE TABLE `tb_ratings` (
 
 LOCK TABLES `tb_ratings` WRITE;
 /*!40000 ALTER TABLE `tb_ratings` DISABLE KEYS */;
-INSERT INTO `tb_ratings` VALUES (1,4.5,'manisha',1,'nice'),(2,4.0,'shruthi',1,'good'),(15,4.0,'manisha',6,'good');
+INSERT INTO `tb_ratings` VALUES (4.5,'manisha',1,'good',1),(4.0,'shruthi',1,'okay',2),(4.0,'manisha',2,'nice',3);
 /*!40000 ALTER TABLE `tb_ratings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-16  3:42:10
+-- Dump completed on 2017-03-21  9:37:27

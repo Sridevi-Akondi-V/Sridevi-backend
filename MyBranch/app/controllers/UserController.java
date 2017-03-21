@@ -87,10 +87,11 @@ public class UserController extends Controller {
         //int age= Period.between(dob,localDate).getYears();
        //Logger.debug(String.valueOf(age));
         if( localDate.getMonth() == dob.getMonth() && localDate.getDayOfMonth() == dob.getDayOfMonth()) {
-                String q = "SELECT * FROM mavericks_project.tb_restaurants;";
+                String q = "select * from tb_restaurants where tb_restaurants.Collection_Type='Fine Dining'";
                 Query query1 = jpaApi.em().createNativeQuery(q);
                 List<Restaurant> rest = query1.getResultList();
-                int id = ThreadLocalRandom.current().nextInt(1, rest.size() + 1);
+                Logger.debug(String.valueOf(rest.size()));
+                int id = ThreadLocalRandom.current().nextInt(21, 25 + 1);
                 Restaurant i = jpaApi.em().find(Restaurant.class, id);
                 JsonNode json1 = Json.toJson(i);
                 //json2=Json.toJson(age);

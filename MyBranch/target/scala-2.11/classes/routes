@@ -25,12 +25,8 @@ GET     /search_restaurants_by_name_area                                        
 GET     /search_nearby_restaurants/:latitude                                        controllers.RestaurantController.getNearbyRestaurants(latitude: java.lang.Double,longitude: java.lang.Double)
 GET     /filter                                                                     controllers.RestaurantController.getRestaurantsBySearchFilter(keyword: java.lang.String ?= null , collection: java.lang.String?= null, time: java.lang.String?= null , cost1: Integer?= null, cost2: Integer?= null, delivery: Integer?= null)
 GET     /search/:keyword                                                            controllers.RestaurantController.getNearbyRestaurantsBySearch(keyword: java.lang.String)
-GET     /filter_search                                                               controllers.RestaurantController.getRestaurantsSearch( collection: java.lang.String ?= null, time: java.lang.String ?= null , cost1: Integer ?= null, cost2: Integer ?= null, delivery: Integer ?= null)
+#GET     /filter_search                                                               controllers.RestaurantController.getRestaurantsSearch( collection: java.lang.String ?= null, time: java.lang.String ?= null , cost1: Integer ?= null, cost2: Integer ?= null, delivery: Integer ?= null)
 GET     /filter_restaurants                                                          controllers.RestaurantController.getRestaurantsByFilters(keyword: java.lang.String ?= null, collection: java.lang.String ?= null, time: java.lang.String ?= null , cost1: Integer ?= null, cost2: Integer ?= null, delivery: Integer ?= null)
-
-
-
-
 
 #The members can be retrieved, created, updated and deleted
 GET      /members_list                                                             controllers.MemberController.getMembersList()
@@ -70,4 +66,4 @@ GET /users/users_dob                                                            
 POST  /users/rating                                                                 controllers.RatingController.postRatingRestaurants()
 GET   /avg_rating_restaurant                                                        controllers.RestaurantController.AvgRatingofRestaurant(id : Integer ?= null)
 #GET   /rating_by_currentuser                                                        controllers.UserController.RatingsByCurrentUser(uname: java.lang.String ?= null)
-GET   /ratings_reviews                                                              controllers.RestaurantController.Reviews_Ratings_Restaurant(id : Integer ?= null)
+GET   /ratings_reviews                                                             controllers.RestaurantController.Reviews_Ratings_Restaurant(id : Integer ?= null)

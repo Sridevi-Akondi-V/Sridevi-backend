@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Sun Mar 19 17:46:25 IST 2017
+// @DATE:Tue Mar 21 07:58:46 IST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -38,7 +38,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "filter" + queryString(List(if(keyword == null ) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("keyword", keyword)), if(collection == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("collection", collection)), if(time == null ) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("time", time)), if(cost1 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost1", cost1)), if(cost2 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost2", cost2)), if(delivery == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("delivery", delivery)))))
     }
   
-    // @LINE:71
+    // @LINE:67
     def AvgRatingofRestaurant(id:Integer = null): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "avg_rating_restaurant" + queryString(List(if(id == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("id", id)))))
@@ -56,16 +56,10 @@ package controllers {
       Call("PUT", _prefix + { _defaultPrefix } + "update_a_restaurant/" + implicitly[PathBindable[Integer]].unbind("id", id))
     }
   
-    // @LINE:73
+    // @LINE:69
     def Reviews_Ratings_Restaurant(id:Integer = null): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "ratings_reviews" + queryString(List(if(id == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("id", id)))))
-    }
-  
-    // @LINE:28
-    def getRestaurantsSearch(collection:java.lang.String = null, time:java.lang.String = null , cost1:Integer = null, cost2:Integer = null, delivery:Integer = null): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "filter_search" + queryString(List(if(collection == null) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("collection", collection)), if(time == null ) None else Some(implicitly[QueryStringBindable[java.lang.String]].unbind("time", time)), if(cost1 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost1", cost1)), if(cost2 == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("cost2", cost2)), if(delivery == null) None else Some(implicitly[QueryStringBindable[Integer]].unbind("delivery", delivery)))))
     }
   
     // @LINE:11
@@ -127,38 +121,38 @@ package controllers {
   
   }
 
-  // @LINE:51
+  // @LINE:47
   class ReverseCollectionController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:53
+    // @LINE:49
     def createCollection(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "collection")
     }
   
-    // @LINE:51
+    // @LINE:47
     def getCollectionsList(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "get_all_collections")
     }
   
-    // @LINE:55
+    // @LINE:51
     def deleteCollection(ctype:String): Call = {
       import ReverseRouteContext.empty
       Call("DELETE", _prefix + { _defaultPrefix } + "delete_collection/" + implicitly[PathBindable[String]].unbind("ctype", dynamicString(ctype)))
     }
   
-    // @LINE:54
+    // @LINE:50
     def updateCollection(ctype:String): Call = {
       import ReverseRouteContext.empty
       Call("PUT", _prefix + { _defaultPrefix } + "update_a_collection/" + implicitly[PathBindable[String]].unbind("ctype", dynamicString(ctype)))
     }
   
-    // @LINE:52
+    // @LINE:48
     def getCollectionByID(ctype:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "collections_by_id/" + implicitly[PathBindable[String]].unbind("ctype", dynamicString(ctype)))
@@ -166,38 +160,38 @@ package controllers {
   
   }
 
-  // @LINE:36
+  // @LINE:32
   class ReverseMemberController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:36
+    // @LINE:32
     def getMembersList(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "members_list")
     }
   
-    // @LINE:39
+    // @LINE:35
     def updateMember(id:Integer): Call = {
       import ReverseRouteContext.empty
       Call("PUT", _prefix + { _defaultPrefix } + "update_members/" + implicitly[PathBindable[Integer]].unbind("id", id))
     }
   
-    // @LINE:38
+    // @LINE:34
     def createMember(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "create_member")
     }
   
-    // @LINE:40
+    // @LINE:36
     def deleteMember(id:Integer): Call = {
       import ReverseRouteContext.empty
       Call("DELETE", _prefix + { _defaultPrefix } + "delete_member/" + implicitly[PathBindable[Integer]].unbind("id", id))
     }
   
-    // @LINE:37
+    // @LINE:33
     def getMemberByID(id:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "members/" + implicitly[PathBindable[Integer]].unbind("id", id))
@@ -205,26 +199,26 @@ package controllers {
   
   }
 
-  // @LINE:45
+  // @LINE:41
   class ReverseImageController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:46
+    // @LINE:42
     def downloadImage(id:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "images/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
     }
   
-    // @LINE:47
+    // @LINE:43
     def deleteImage(id:String): Call = {
       import ReverseRouteContext.empty
       Call("DELETE", _prefix + { _defaultPrefix } + "images/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
     }
   
-    // @LINE:45
+    // @LINE:41
     def uploadImage(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "images")
@@ -232,32 +226,32 @@ package controllers {
   
   }
 
-  // @LINE:64
+  // @LINE:60
   class ReverseUserController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:66
+    // @LINE:62
     def getCurrentUser(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "users/current")
     }
   
-    // @LINE:64
+    // @LINE:60
     def signIn(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "users/signin")
     }
   
-    // @LINE:65
+    // @LINE:61
     def signOut(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "users/signout")
     }
   
-    // @LINE:67
+    // @LINE:63
     def userDob(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "users/users_dob")
@@ -265,14 +259,14 @@ package controllers {
   
   }
 
-  // @LINE:70
+  // @LINE:66
   class ReverseRatingController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:70
+    // @LINE:66
     def postRatingRestaurants(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "users/rating")
@@ -280,14 +274,14 @@ package controllers {
   
   }
 
-  // @LINE:59
+  // @LINE:55
   class ReverseImagesController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:59
+    // @LINE:55
     def getImagesList(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "get_all_images")
