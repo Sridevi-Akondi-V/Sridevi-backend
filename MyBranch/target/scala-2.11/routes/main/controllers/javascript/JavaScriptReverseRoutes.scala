@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/VISHNU VARDHAN/Sridevi-backend/MyBranch/conf/routes
-// @DATE:Tue Mar 21 07:58:46 IST 2017
+// @SOURCE:/Users/bmanisha/Sridevi-backend/MyBranch/conf/routes
+// @DATE:Tue Mar 21 10:28:10 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }

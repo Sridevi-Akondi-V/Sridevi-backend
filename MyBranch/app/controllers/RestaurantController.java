@@ -200,17 +200,10 @@ public class RestaurantController {
 
     @Transactional
     public Result getNearbyRestaurantsBySearch(String keyword) {
-        Query query=jpaApi.em().createNativeQuery("SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 IN BOOLEAN MODE)");
+        Query query=jpaApi.em().createNativeQuery("SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 WITH QUERY EXPANSION)");
         query.setParameter(1,keyword.concat("*"));
         List<Restaurant> rest = query.getResultList();
         JsonNode json = Json.toJson(rest);
-        /*if(rest.isEmpty()) {
-            Query query1=jpaApi.em().createNativeQuery("SELECT * FROM tb_restaurants WHERE MATCH(Description,Cuisine,Restaurants_names,Area) AGAINST(?1 WITH QUERY EXPANSION)");
-            query1.setParameter(1,keyword.concat("*"));
-            List<Restaurant> rest1 = query1.getResultList();
-            JsonNode json1 = Json.toJson(rest1);
-            return ok(json1);
-        }*/
         return ok(json);
     }
 

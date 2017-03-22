@@ -1,7 +1,7 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\conf\application.conf,C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\target\scala-2.11\classes\application.conf)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\conf\conf.iml,C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\target\scala-2.11\classes\conf.iml)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\conf\logback.xml,C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\target\scala-2.11\classes\logback.xml)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\conf\META-INF,C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\target\scala-2.11\classes\META-INF)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\conf\routes,C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\target\scala-2.11\classes\routes)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\conf\META-INF\persistence.xml,C:\Users\VISHNU VARDHAN\Sridevi-backend\MyBranch\target\scala-2.11\classes\META-INF\persistence.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/bmanisha/Sridevi-backend/MyBranch/conf/application.conf,/Users/bmanisha/Sridevi-backend/MyBranch/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/bmanisha/Sridevi-backend/MyBranch/conf/conf.iml,/Users/bmanisha/Sridevi-backend/MyBranch/target/scala-2.11/classes/conf.iml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/bmanisha/Sridevi-backend/MyBranch/conf/logback.xml,/Users/bmanisha/Sridevi-backend/MyBranch/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/bmanisha/Sridevi-backend/MyBranch/conf/META-INF,/Users/bmanisha/Sridevi-backend/MyBranch/target/scala-2.11/classes/META-INF)[0m
+[0m[[0mdebug[0m] [0m	(/Users/bmanisha/Sridevi-backend/MyBranch/conf/routes,/Users/bmanisha/Sridevi-backend/MyBranch/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/bmanisha/Sridevi-backend/MyBranch/conf/META-INF/persistence.xml,/Users/bmanisha/Sridevi-backend/MyBranch/target/scala-2.11/classes/META-INF/persistence.xml)[0m
